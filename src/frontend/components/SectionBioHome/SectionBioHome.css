@@ -4,8 +4,7 @@
     align-items: center;
     gap: 2rem;
     max-width: 800px;
-    /* background-color: red; */
-    height: 100vh;
+    margin: 3rem 0;
 }
 
 .section-bio .cont-img-bio {
@@ -19,8 +18,8 @@
 
 @media (max-width: 780px) {
     .section-bio {
-        margin-top: 4rem;
         flex-direction: column;
+        margin: 3rem 0 0 0;
     }
 
     .section-bio p {
