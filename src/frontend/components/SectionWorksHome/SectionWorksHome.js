@@ -6,7 +6,7 @@ import { ITEMS_WORKS } from '../../services/dataItemsWork';
 const SectionWorksHome = () => {
   return (
     <section className="section-works">
-      <h2>Trabajos :)</h2>
+      <h2>Proyectos</h2>
       <p>
         En la pestañita <span>¿Qué hago?</span> estará todo, peeeero, va una
         pequeña descripción.

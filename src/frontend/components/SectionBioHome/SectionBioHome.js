@@ -19,7 +19,7 @@ const SectionBioHome = () => {
         <p>Actualmente vivo en la capital donde estudio y trabajo.</p>
         <p>
           Bienvenides a mi página, que también podemos llamarla, baúl,
-          biblioteca, museo, exposición, o en fin, como más te guste :)
+          biblioteca, museo, exposición, o en fin, como más te guste.
         </p>
         <p>
           Aquí voy a compartit todo lo que produzco, desde las ilustraciones
