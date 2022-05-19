@@ -7,8 +7,8 @@ const Header = () => {
       <div className="container-header-img">
         <img
           className="header-img"
-          src="https://i.ibb.co/Wpw5LWX/logo2022.png"
-          alt="logo nati fessia"
+          src="https://i.ibb.co/wRYCPsb/logo2022.png"
+          alt="logo repiqueterea"
         />
       </div>
       <input type="checkbox" id="menu-bar" />

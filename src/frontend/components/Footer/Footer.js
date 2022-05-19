@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container-header-img">
           <img
             className="header-img"
-            src="https://i.ibb.co/Wpw5LWX/logo2022.png"
+            src="https://i.ibb.co/wRYCPsb/logo2022.png"
             alt="logo nati fessia"
           />
         </div>
