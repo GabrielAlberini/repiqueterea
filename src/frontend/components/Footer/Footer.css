@@ -1,0 +1,60 @@
+footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+footer div {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer svg {
+    width: 50px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+footer svg:hover {
+    fill: rgb(171, 29, 171);
+    transition: .3s ease;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer p > a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+footer p > a:hover {
+    color: rgb(171, 29, 171);
+}
+
+@media (max-width: 780px) {
+    footer {
+       flex-direction: column;
+       gap: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

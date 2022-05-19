@@ -1,5 +1,45 @@
-/* ELIMINAMOS LOS ESTILOS DE NAVEGADOR */
-@import url("./reset.css");
+@font-face {
+    font-family: "titulo";
+    src: url("../../assets/Garet-Book.ttf");
+}
 
-/* AÑADE AQUÍ TUS ESTILOS */
+:root {
+    /*Header*/
+    --bg-degrade-radial: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    --bg-links-header: rgba(34, 192, 195, 0.444);
 
+    /*Button*/
+    --bg-degrade: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
+    --bg-degrade-hover: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.698) 31%, rgba(142, 45, 253, 0.674) 79%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'titulo';
+}
+
+/*Botón primario*/
+
+.btn-main {
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: rebeccapurple;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    background: var(--bg-degrade);
+    transition: 1s ease;
+}
+
+.btn-main:hover {
+    color: black;
+    background: var(--bg-degrade-hover);
+    transition: 1s ease;
+}

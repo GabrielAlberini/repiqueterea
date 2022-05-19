@@ -1,0 +1,132 @@
+/*Header*/
+header {
+    top: 0; left: 0; right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(238,174,202);
+    background: var(--bg-degrade-radial);
+    z-index: 1000;
+    position: fixed;
+}
+
+.container-header-img {
+    width: 100px;
+}
+
+.header-img {
+    width: 100%;
+}
+
+/*Navegación*/
+
+header nav ul {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+}
+
+header nav ul li a{
+    font-size: 1rem;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background: var(--bg-links-header);
+    color: #fff;
+    transition: .3s ease;
+}
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.804);
+    padding: 0;
+    display: none;
+    border-radius: 5px;
+}
+
+header nav ul li ul li{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+header nav ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+.menu-icon {
+    width: 30px;
+}
+
+header label {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 780px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: #fff;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header nav ul {
+       padding-left: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header nav ul li ul li{
+        position: relative;
+        width: 100%;
+    }
+
+    header nav ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ nav {
+        display: initial;
+    }
+}

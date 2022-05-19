@@ -1,0 +1,28 @@
+.section-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 4rem 0;
+}
+
+.section-class .cont-img-class {
+    width: 100%;
+}
+
+.img-class {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 780px) {
+    .section-class {
+        flex-direction: column-reverse;
+        margin: 3rem 0;
+    }
+
+    .section-class p {
+        text-align: center;
+    }
+}

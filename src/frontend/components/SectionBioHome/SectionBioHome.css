@@ -1,0 +1,29 @@
+.section-bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    /* background-color: red; */
+    height: 100vh;
+}
+
+.section-bio .cont-img-bio {
+    width: 100%;
+}
+
+.img-bio {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 780px) {
+    .section-bio {
+        margin-top: 4rem;
+        flex-direction: column;
+    }
+
+    .section-bio p {
+        text-align: center;
+    }
+}
