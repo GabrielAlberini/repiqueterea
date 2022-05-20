@@ -1,5 +1,6 @@
 import "./SectionClassHome.css";
 import { Link } from "react-router-dom";
+import { SECTION_CLASS_ROUTE } from "../../services/routesHeader";
 
 
 const SectionClassHome = () => {
@@ -15,7 +16,7 @@ const SectionClassHome = () => {
           comunicar al arte.
         </p>
         <p>Por eso, si tenes datita interesante ¡Mandame un mensajito! :)</p>
-        <Link className="btn-main" to="/">
+        <Link className="btn-main" to={SECTION_CLASS_ROUTE}>
           Ver más
         </Link>
       </div>

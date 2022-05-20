@@ -1,10 +1,10 @@
-import "./Home.css";
+import "./QuienSoy.css";
 import { Layout } from "../../components/Layout/Layout";
 import { SectionBioHome } from "../../components/SectionBioHome/SectionBioHome";
 import { SectionWorksHome } from "../../components/SectionWorksHome/SectionWorksHome";
 import { SectionClassHome } from "../../components/SectionClassHome/SectionClassHome";
 
-const Home = () => {
+const QuienSoy = () => {
   return (
     <>
       <Layout>
@@ -16,4 +16,4 @@ const Home = () => {
   );
 };
 
-export { Home };
+export { QuienSoy };

@@ -1,6 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from './frontend/views/Home/Home';
+import {
+  QUIEN_SOY_ROUTE,
+  QUE_HAGO_ROUTE,
+  CUANDO_TRABAJO_ROUTE,
+  TRABAJAMOS_JUNTOS_ROUTE,
+  DONDE_ME_ENCONTRAS_ROUTE,
+  ILUSTRACIONES,
+  MASCOTAS,
+  PERSONAJES,
+  BLOG_PERSONAL,
+  EXPO_FERIAS,
+  TIENDA,
+  ADMIN_ROUTE,
+  SECTION_CLASS_ROUTE
+} from "./frontend/services/routesHeader";
+import { QuienSoy } from './frontend/views/QuienSoy/QuienSoy';
+import { QueHago } from './frontend/views/QueHago/QueHago';
+import { CuandoTrabajo } from './frontend/views/CuandoTrabajo/CuandoTrabajo';
+import { TrabajamosJuntos } from './frontend/views/TrabajamosJuntos/TrabajamosJuntos';
+import { DondeMeEncontras } from './frontend/views/DondeMeEncontras/DondeMeEncontras';
 // import { NotFound } from './views/NotFound/NotFound'
+import { SectionWork } from "./frontend/views/SectionWork/SectionWork";
+import { SectionClass } from "./frontend/views/SectionClass/SectionClass";
 import { DashboardLogin } from './frontend/login/views/DashboardLogin';
 
 const Router = () => {
@@ -8,8 +29,19 @@ const Router = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/admin" element={<DashboardLogin />}></Route>
+          <Route path={QUIEN_SOY_ROUTE} element={<QuienSoy />}></Route>
+          <Route path={QUE_HAGO_ROUTE} element={<QueHago />}></Route>
+          <Route path={ILUSTRACIONES} element={<SectionWork titleSection='ilustraciones'/>}></Route>
+          <Route path={MASCOTAS} element={<SectionWork titleSection='mascotas'/>}></Route>
+          <Route path={PERSONAJES} element={<SectionWork titleSection='personajes'/>}></Route>
+          <Route path={BLOG_PERSONAL} element={<SectionWork titleSection='blog-personal'/>}></Route>
+          <Route path={EXPO_FERIAS} element={<SectionWork titleSection='expo-ferias'/>}></Route>
+          <Route path={TIENDA} element={<SectionWork titleSection='tienda'/>}></Route>
+          <Route path={CUANDO_TRABAJO_ROUTE} element={<CuandoTrabajo />}></Route>
+          <Route path={TRABAJAMOS_JUNTOS_ROUTE} element={<TrabajamosJuntos />}></Route>
+          <Route path={DONDE_ME_ENCONTRAS_ROUTE} element={<DondeMeEncontras />}></Route>
+          <Route path={SECTION_CLASS_ROUTE} element={<SectionClass />}></Route>
+          <Route path={ADMIN_ROUTE} element={<DashboardLogin />}></Route>
           {/* <Route path="/*" element={<NotFound />}></Route> */}
         </Routes>
       </BrowserRouter>

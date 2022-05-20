@@ -11,15 +11,6 @@ header {
     position: fixed;
 }
 
-.container-header-img {
-    width: 100px;
-    margin-left: 1rem;
-}
-
-.header-img {
-    width: 100%;
-}
-
 /*Navegación*/
 
 header nav ul {

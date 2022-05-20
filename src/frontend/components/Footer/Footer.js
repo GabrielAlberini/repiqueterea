@@ -1,16 +1,13 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
+import { QUIEN_SOY_ROUTE } from "../../services/routesHeader";
+import { Logo } from "../Logo/Logo";
 
 const Footer = () => {
   return (
     <footer>
       <div>
-        <div className="container-header-img">
-          <img
-            className="header-img"
-            src="https://i.ibb.co/wRYCPsb/logo2022.png"
-            alt="logo nati fessia"
-          />
-        </div>
+        <Logo />
       </div>
       <div>
         <a href="https://www.instagram.com/repiqueterea.art/"
