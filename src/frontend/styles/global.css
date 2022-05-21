@@ -1,5 +1,10 @@
 @font-face {
     font-family: "titulo";
+    src: url("../../assets/ProdottoInCina.ttf");
+}
+
+@font-face {
+    font-family: "cuerpo";
     src: url("../../assets/Garet-Book.ttf");
 }
 
@@ -19,32 +24,22 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'titulo';
-}
-
-/*Logo*/
-.container-logo {
-    width: 100px;
-    margin-left: 1rem;
-}
-
-.logo {
-    width: 100%;
+    font-family: 'cuerpo';
 }
 
 /*Botón primario*/
 .btn-main {
-    display: block;
     width: 200px;
     text-align: center;
     background-color: rebeccapurple;
-    margin: 2rem auto;
+    margin: 2rem 1rem;
     padding: .5rem 1rem;
     color: black;
     text-decoration: none;
     border-radius: 5px;
     background: var(--bg-degrade);
     transition: 1s ease;
+    display: inline-block;
 }
 
 .btn-main:hover {

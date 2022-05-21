@@ -14,7 +14,7 @@ const SectionWorksHome = () => {
       <article className="cont-item-work">
         {ITEMS_WORKS.map((item) => {
           return (
-            <Link className="item-work-link" to={item.route}>
+            <Link key={item.title} className="item-work-link" to={item.route}>
               <div className="item-work">
                 <div className="cont-img-item-work">
                   <img

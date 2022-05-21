@@ -33,7 +33,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <p>
+        <p className="cont-text-footer">
           Sitio desarrollado por <br />{" "}
           <a
             href="https://gabrielalberini.vercel.app/"

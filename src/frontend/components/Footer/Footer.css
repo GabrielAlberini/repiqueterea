@@ -39,6 +39,10 @@ footer p > a:hover {
     color: rgb(171, 29, 171);
 }
 
+.cont-text-footer {
+    margin: 0;
+}
+
 @media (max-width: 780px) {
     footer {
        flex-direction: column;
