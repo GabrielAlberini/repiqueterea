@@ -1,59 +1,43 @@
 import { useEffect, useState } from "react";
 import { Modal, Stack, Form, Button } from "react-bootstrap";
-import {
-  addIlustracion,
-  addMascotas,
-  addPersonajes,
-  addBlog,
-} from "../../../../backend/functions/add";
+import { addFeria } from "../../../../backend/functions/add";
 
-const EditarModal = ({
-  isModalEditar,
-  setIsModalEditar,
+const EditarModalFeria = ({
+  isModalEditarFeria,
+  setIsModalEditarFeria,
   actualizarEstadoProductos,
-  productoEditar,
-  setProductoEditar,
+  productoEditarFeria,
+  setProductoEditarFeria,
 }) => {
   const [productoEstado, setProductoEstado] = useState({});
 
   function editarProductoModal() {
-    const selectWork = productoEstado.selectWork;
     const sku = document.getElementById("sku").value;
-    const titulo = document.getElementById("titulo").value;
+    const nombre = document.getElementById("nombre").value;
+    const lugar = document.getElementById("lugar").value;
     const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+    const direccion = document.getElementById("direccion").value;
     const URLimagen = document.getElementById("URLimagen").value;
     const link = document.getElementById("link").value;
     const descripcion = document.getElementById("descripcion").value;
 
     const infoProducto = {
-      selectWork,
-      titulo,
+      sku,
+      lugar,
       fecha,
+      nombre,
+      hora,
+      direccion,
       URLimagen,
       link,
       descripcion,
-      sku
     };
 
-    switch (productoEstado.selectWork) {
-      case "1":
-        addIlustracion(infoProducto);
-        break;
-      case "2":
-        addMascotas(infoProducto);
-        break;
-      case "3":
-        addPersonajes(infoProducto);
-        break;
-      case "4":
-        addBlog(infoProducto);
-        break;
-      default:
-        console.log("No existe esa opción");
-    }
-    setProductoEditar(null);
+    addFeria(infoProducto);
+    setProductoEditarFeria(null);
     actualizarEstadoProductos();
-    setIsModalEditar(false);
+    setIsModalEditarFeria(false);
   }
 
   const handleChange = (e) => {
@@ -62,15 +46,15 @@ const EditarModal = ({
   };
 
   useEffect(() => {
-    setProductoEstado({ ...productoEditar });
-  }, [productoEditar]);
+    setProductoEstado({ ...productoEditarFeria });
+  }, [productoEditarFeria]);
 
   return (
     <Modal
-      show={isModalEditar}
+      show={isModalEditarFeria}
       onHide={() => {
-        setIsModalEditar(false);
-        setProductoEditar(null);
+        setIsModalEditarFeria(false);
+        setProductoEditarFeria(null);
       }}
     >
       <Modal.Header>
@@ -94,30 +78,60 @@ const EditarModal = ({
               name="sku"
               onChange={(e) => handleChange(e)}
             />
-            <Form.Label>Titulo</Form.Label>
+            <Form.Label>Nombre</Form.Label>
             <Form.Control
-              id="titulo"
-              placeholder="Nombre del cliente"
+              id="nombre"
+              placeholder="Inserte el nombre del evento"
               type="text"
               className="mb-2"
-              value={productoEstado.titulo}
-              name="titulo"
+              value={productoEstado.nombre}
+              name="nombre"
               onChange={(e) => handleChange(e)}
             />
-            <Form.Label>Fecha</Form.Label>
+            <Form.Label>Lugar</Form.Label>
             <Form.Control
-              id="fecha"
-              placeholder="Fecha"
+              id="lugar"
+              placeholder="Inserte el lugar donde se realizará"
               type="text"
               className="mb-2"
-              value={productoEstado.fecha}
+              value={productoEstado.lugar}
+              name="lugar"
+              onChange={(e) => handleChange(e)}
+            />
+            <Form.Label>Día</Form.Label>
+            <Form.Control
+              id="fecha"
+              placeholder="Inserte fecha del evento"
+              type="text"
+              className="mb-2"
+              value={productoEstado?.fecha}
               name="fecha"
               onChange={(e) => handleChange(e)}
             />
-            <Form.Label>URL imágen detalle</Form.Label>
+            <Form.Label>Hora</Form.Label>
+            <Form.Control
+              id="hora"
+              placeholder="Inserte hora de comienzo"
+              type="text"
+              className="mb-2"
+              value={productoEstado?.hora}
+              name="hora"
+              onChange={(e) => handleChange(e)}
+            />
+            <Form.Label>Dirección</Form.Label>
+            <Form.Control
+              id="direccion"
+              placeholder="Inserte hora de dirección"
+              type="text"
+              className="mb-2"
+              value={productoEstado?.direccion}
+              name="direccion"
+              onChange={(e) => handleChange(e)}
+            />
+            <Form.Label>URL de la imagen</Form.Label>
             <Form.Control
               id="URLimagen"
-              placeholder="URL de la imágen"
+              placeholder="Inserte el URL de la imágen"
               type="text"
               className="mb-2"
               value={productoEstado?.URLimagen}
@@ -127,7 +141,7 @@ const EditarModal = ({
             <Form.Label>Link de la publicación</Form.Label>
             <Form.Control
               id="link"
-              placeholder="URL de la publicación"
+              placeholder="Link de la pubicación"
               type="text"
               className="mb-2"
               value={productoEstado?.link}
@@ -139,7 +153,7 @@ const EditarModal = ({
               as="textarea"
               rows={7}
               id="descripcion"
-              placeholder="Descripción del trabajo"
+              placeholder="Ingresa la descripción"
               type="text"
               className="mb-2"
               value={productoEstado?.descripcion}
@@ -153,8 +167,8 @@ const EditarModal = ({
         <Button
           variant="secondary"
           onClick={() => {
-            setIsModalEditar(false);
-            setProductoEditar(null);
+            setIsModalEditarFeria(false);
+            setProductoEditarFeria(null);
           }}
         >
           Cancelar
@@ -167,4 +181,4 @@ const EditarModal = ({
   );
 };
 
-export { EditarModal };
+export { EditarModalFeria };

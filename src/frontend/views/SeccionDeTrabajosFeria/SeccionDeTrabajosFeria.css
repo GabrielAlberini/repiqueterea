@@ -1,0 +1,34 @@
+.cont-items-main-feria {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.cont-item-feria{ 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.cont-item-feria h4{ 
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+.cont-img-item-fera {
+    width: 100%;
+}
+
+.img-item-fera {
+    width: 100%;
+    margin: auto;
+}
+
+.cont-txt-item-feria {
+    width: 100%;
+    margin-top: 1rem;
+}

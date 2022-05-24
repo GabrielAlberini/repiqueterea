@@ -23,6 +23,11 @@ import { DondeMeEncontras } from './frontend/views/DondeMeEncontras/DondeMeEncon
 import { SectionWork } from "./frontend/views/SectionWork/SectionWork";
 import { SectionClass } from "./frontend/views/SectionClass/SectionClass";
 import { DashboardLogin } from './frontend/login/views/DashboardLogin';
+//Vistas de tipos de trabajo
+import { SeccionDeTrabajos } from "./frontend/views/SeccionDeTrabajos/SeccionDeTrabajos";
+import { SeccionDeTrabajosBlog } from "./frontend/views/SeccionDeTrabajosBlog/SeccionDeTrabajosBlog";
+import { SeccionDeTrabajosFeria } from "./frontend/views/SeccionDeTrabajosFeria/SeccionDeTrabajosFeria";
+
 
 const Router = () => {
   return (
@@ -31,11 +36,11 @@ const Router = () => {
         <Routes>
           <Route path={QUIEN_SOY_ROUTE} element={<QuienSoy />}></Route>
           <Route path={QUE_HAGO_ROUTE} element={<QueHago />}></Route>
-          <Route path={ILUSTRACIONES} element={<SectionWork titleSection='ilustraciones'/>}></Route>
-          <Route path={MASCOTAS} element={<SectionWork titleSection='mascotas'/>}></Route>
-          <Route path={PERSONAJES} element={<SectionWork titleSection='personajes'/>}></Route>
-          <Route path={BLOG_PERSONAL} element={<SectionWork titleSection='blog-personal'/>}></Route>
-          <Route path={EXPO_FERIAS} element={<SectionWork titleSection='expo-ferias'/>}></Route>
+          <Route path={ILUSTRACIONES} element={<SeccionDeTrabajos title='Ilustraciones' categoria='ilustraciones'/>}></Route>
+          <Route path={MASCOTAS} element={<SeccionDeTrabajos title='Mascotas' categoria='mascotas'/>}></Route>
+          <Route path={PERSONAJES} element={<SeccionDeTrabajos title='Personajes' categoria='personajes'/>}></Route>
+          <Route path={BLOG_PERSONAL} element={<SeccionDeTrabajosBlog />}></Route>
+          <Route path={EXPO_FERIAS} element={<SeccionDeTrabajosFeria />}></Route>
           <Route path={TIENDA} element={<SectionWork titleSection='tienda'/>}></Route>
           <Route path={CUANDO_TRABAJO_ROUTE} element={<CuandoTrabajo />}></Route>
           <Route path={TRABAJAMOS_JUNTOS_ROUTE} element={<TrabajamosJuntos />}></Route>

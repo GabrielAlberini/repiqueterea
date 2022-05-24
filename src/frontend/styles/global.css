@@ -40,10 +40,40 @@
     background: var(--bg-degrade);
     transition: 1s ease;
     display: inline-block;
+    border: none;
 }
 
 .btn-main:hover {
     color: black;
     background: var(--bg-degrade-hover);
     transition: 1s ease;
+    cursor: pointer;
+}
+
+h2 {
+padding: 2rem 0;
+}
+
+/*Loader*/ 
+
+.container-img-loader {
+    width: 100px;
+    animation-name: rotation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    margin: 0 auto 4rem auto;
+}
+
+.img-loader {
+    width: 100%;
+}
+
+@keyframes rotation {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
 }

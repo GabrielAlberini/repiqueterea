@@ -2,35 +2,35 @@
 import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 
 const db = getFirestore();
-console.log("Aca la base de datos", db);
 
-function addWork(infoProducto, dbName) {
-  // switch (dbName) {
-  //   case "1":
-  //     const collectionRef = collection(db, "portfolio");
-  //     const docRef = doc(collectionRef, infoProducto.sku);
-  //     setDoc(docRef, infoProducto);
-  //     break;
-  //   case "2":
-  //     const collectionRef = collection(db, "portfolio");
-  //     const docRef = doc(collectionRef, infoProducto.sku);
-  //     setDoc(docRef, infoProducto);
-  //     break;
-  //   default:
-  //     return "No existe esa ocpción";
-  // }
-
-  if(dbName === '1') {
-    console.log("Hola desde opcion 1")
-    const collectionRef = collection(db, "ilustraciones");
-    const docRef = doc(collectionRef, infoProducto.sku);
-    setDoc(docRef, infoProducto);
-  } else if( dbName === '2') {
-    const collectionRef = collection(db, "mascotas");
-    const docRef = doc(collectionRef, infoProducto.sku);
-    setDoc(docRef, infoProducto);
-    console.log(infoProducto)
-  } 
+function addIlustracion(infoProducto) {
+  const collectionRef = collection(db, "ilustraciones");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
 }
 
-export { addWork };
+function addMascotas(infoProducto) {
+  const collectionRef = collection(db, "mascotas");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+function addPersonajes(infoProducto) {
+  const collectionRef = collection(db, "personajes");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+function addBlog(infoProducto) {
+  const collectionRef = collection(db, "blog");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+function addFeria(infoProducto) {
+  const collectionRef = collection(db, "feria");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+export { addIlustracion, addMascotas, addPersonajes, addBlog, addFeria };

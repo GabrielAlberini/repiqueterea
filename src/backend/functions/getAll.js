@@ -3,7 +3,7 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);
 
-async function getAllWorks() {
+async function getAllIlustraciones() {
   const productos = [];
   const collectionRef = collection(db, "ilustraciones");
   const snapshot = await getDocs(collectionRef);
@@ -45,6 +45,74 @@ async function getAllMascotas() {
   return productos;
 }
 
+async function getAllPersonajes() {
+  const productos = [];
+  const collectionRef = collection(db, "personajes");
+  const snapshot = await getDocs(collectionRef);
+  snapshot.forEach((doc) => {
+    productos.push(doc.data());
+  });
+  productos.sort((a, b) => {
+    const transformSKUa = Number(a.sku);
+    const transformSKUb = Number(b.sku);
+    if (transformSKUa > transformSKUb) {
+      return -1;
+    }
+    if (transformSKUa < transformSKUb) {
+      return 1;
+    }
+    return 0;
+  });
 
+  return productos;
+}
 
-export { getAllWorks, getAllMascotas };
+async function getAllBlog() {
+  const productos = [];
+  const collectionRef = collection(db, "blog");
+  const snapshot = await getDocs(collectionRef);
+  snapshot.forEach((doc) => {
+    productos.push(doc.data());
+  });
+  productos.sort((a, b) => {
+    const transformSKUa = Number(a.sku);
+    const transformSKUb = Number(b.sku);
+    if (transformSKUa > transformSKUb) {
+      return -1;
+    }
+    if (transformSKUa < transformSKUb) {
+      return 1;
+    }
+    return 0;
+  });
+  return productos;
+}
+
+async function getAllFeria() {
+  const productos = [];
+  const collectionRef = collection(db, "feria");
+  const snapshot = await getDocs(collectionRef);
+  snapshot.forEach((doc) => {
+    productos.push(doc.data());
+  });
+  productos.sort((a, b) => {
+    const transformSKUa = Number(a.sku);
+    const transformSKUb = Number(b.sku);
+    if (transformSKUa > transformSKUb) {
+      return -1;
+    }
+    if (transformSKUa < transformSKUb) {
+      return 1;
+    }
+    return 0;
+  });
+  return productos;
+}
+
+export {
+  getAllIlustraciones,
+  getAllMascotas,
+  getAllPersonajes,
+  getAllBlog,
+  getAllFeria,
+};

@@ -3,21 +3,54 @@ import { getFirestore, deleteDoc, doc, collection } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);
 
-async function deleteWork(producto, dbName) {
+async function deleteIlustracion(producto) {
   const result = window.confirm("Seguro que desea eliminar el producto?");
-  if (result && dbName[0].selectWork === '1') {
+  if (result) {
     const coleccionRef = collection(db, "ilustraciones");
     const docuRef = doc(coleccionRef, producto.sku);
-    const eliminado = await deleteDoc(docuRef);
-    return eliminado;
-  } else if ( result && dbName[0].selectWork === '2') {
-    console.log("aca desde delete ", dbName[0].selectWork)
-    const coleccionRef = collection(db, "mascotas");
-    const docuRef = doc(coleccionRef, producto.sku);
-    console.log(docuRef)
     const eliminado = await deleteDoc(docuRef);
     return eliminado;
   }
 }
 
-export { deleteWork };
+async function deleteMascotas(producto) {
+  const result = window.confirm("Seguro que desea eliminar el producto?");
+  if (result) {
+    const coleccionRef = collection(db, "mascotas");
+    const docuRef = doc(coleccionRef, producto.sku);
+    const eliminado = await deleteDoc(docuRef);
+    return eliminado;
+  }
+}
+
+async function deletePersonajes(producto) {
+  const result = window.confirm("Seguro que desea eliminar el producto?");
+  if (result) {
+    const coleccionRef = collection(db, "personajes");
+    const docuRef = doc(coleccionRef, producto.sku);
+    const eliminado = await deleteDoc(docuRef);
+    return eliminado;
+  }
+}
+
+async function deleteBlog(producto) {
+  const result = window.confirm("Seguro que desea eliminar el producto?");
+  if (result) {
+    const coleccionRef = collection(db, "blog");
+    const docuRef = doc(coleccionRef, producto.sku);
+    const eliminado = await deleteDoc(docuRef);
+    return eliminado;
+  }
+}
+
+async function deleteFeria(producto) {
+  const result = window.confirm("Seguro que desea eliminar el producto?");
+  if (result) {
+    const coleccionRef = collection(db, "feria");
+    const docuRef = doc(coleccionRef, producto.sku);
+    const eliminado = await deleteDoc(docuRef);
+    return eliminado;
+  }
+}
+
+export { deleteIlustracion, deleteMascotas, deletePersonajes, deleteBlog, deleteFeria };

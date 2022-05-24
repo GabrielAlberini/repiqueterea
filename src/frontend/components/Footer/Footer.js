@@ -1,6 +1,4 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
-import { QUIEN_SOY_ROUTE } from "../../services/routesHeader";
 import { Logo } from "../Logo/Logo";
 
 const Footer = () => {
