@@ -33,4 +33,10 @@ function addFeria(infoProducto) {
   setDoc(docRef, infoProducto);
 }
 
-export { addIlustracion, addMascotas, addPersonajes, addBlog, addFeria };
+function addTienda(infoProducto) {
+  const collectionRef = collection(db, "tienda");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+export { addIlustracion, addMascotas, addPersonajes, addBlog, addFeria, addTienda };

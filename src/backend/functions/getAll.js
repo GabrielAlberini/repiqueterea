@@ -109,10 +109,32 @@ async function getAllFeria() {
   return productos;
 }
 
+async function getAllTienda() {
+  const productos = [];
+  const collectionRef = collection(db, "tienda");
+  const snapshot = await getDocs(collectionRef);
+  snapshot.forEach((doc) => {
+    productos.push(doc.data());
+  });
+  productos.sort((a, b) => {
+    const transformSKUa = Number(a.sku);
+    const transformSKUb = Number(b.sku);
+    if (transformSKUa > transformSKUb) {
+      return -1;
+    }
+    if (transformSKUa < transformSKUb) {
+      return 1;
+    }
+    return 0;
+  });
+  return productos;
+}
+
 export {
   getAllIlustraciones,
   getAllMascotas,
   getAllPersonajes,
   getAllBlog,
   getAllFeria,
+  getAllTienda
 };

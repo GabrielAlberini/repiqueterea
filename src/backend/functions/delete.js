@@ -53,4 +53,14 @@ async function deleteFeria(producto) {
   }
 }
 
-export { deleteIlustracion, deleteMascotas, deletePersonajes, deleteBlog, deleteFeria };
+async function deleteTienda(producto) {
+  const result = window.confirm("Seguro que desea eliminar el producto?");
+  if (result) {
+    const coleccionRef = collection(db, "tienda");
+    const docuRef = doc(coleccionRef, producto.sku);
+    const eliminado = await deleteDoc(docuRef);
+    return eliminado;
+  }
+}
+
+export { deleteIlustracion, deleteMascotas, deletePersonajes, deleteBlog, deleteFeria, deleteTienda };

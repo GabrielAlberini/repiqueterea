@@ -1,16 +1,16 @@
-import "./SeccionDeTrabajosFeria.css";
+import "./SeccionDeTrabajosTienda.css";
 import { Layout } from "../../components/Layout/Layout";
 import { useState, useEffect } from "react";
-import { getAllFeria } from "../../../backend/functions/getAll";
+import { getAllTienda } from "../../../backend/functions/getAll";
 import { Loader } from "../../components/Loader/Loader";
 import { Title } from "../../components/Title/Title";
 
-const SeccionDeTrabajosFeria = () => {
+const SeccionDeTrabajosTienda = () => {
   const [itemsBlog, setItemsBlog] = useState();
 
   //Actualizar Trabajos de Portfolio
   function updateWorks() {
-    getAllFeria().then((workList) => {
+    getAllTienda().then((workList) => {
       setItemsBlog(workList);
     });
   }
@@ -23,45 +23,39 @@ const SeccionDeTrabajosFeria = () => {
     <>
       <Layout>
         <section className="section-main-works">
-          <Title title="Expo y Ferias" />
+          <Title title="Tienda" />
           <article className="cont-txt">
-            <p>Aquí podrás ver cuales son las siguientes fechas de ferias</p>
+            <p>Y como se trata de ir haciendo de a todo para llegar a ser un artista independiente, en esta sección podrás algunas cositas que ofrezco.</p>
             <p>
-              Parte importante de mi trabajo es el intercambio que se producen
-              en las ferias. De esta forma los artistas independientes podemos
-              seguir sosteniendonos y autogestionando todo nuestro material. Así
-              que espero verte en alguna.
+              Son ideales como regalo, decorar un hambiente, hacer cuadritos, guardar cositas. Mandame un mensaje y coordinamos para que tengas tu Repiquelemento jaja.
             </p>
           </article>
-          <article className="cont-items-main-feria">
+          <article className="cont-items-main-tienda">
             {itemsBlog ? (
               itemsBlog.map((item) => {
                 return (
-                  <div className="cont-item-feria" key={item.sku}>
+                  <div className="cont-item-tienda" key={item.sku}>
                     <h4>{item.nombre}</h4>
-                    <p>{item.lugar}</p>
-                    <p>
-                      {item.fecha} - {item.hora}
-                    </p>
-                    <p>{item.direccion}</p>
-                    <div className="cont-img-item-feria">
+                    <p>Costo: ${item.precio}</p>
+                    <p>{item.stock} unidades disponibles</p>
+                    <div className="cont-img-item-tienda">
                       <img
-                        className="img-item-feria"
+                        className="img-item-tienda"
                         src={item.URLimagen}
                         alt={item.titulo}
                       />
-                    </div>
-                    <div className="cont-txt-item-feria">
+                    </div>                   
+                    <div className="cont-txt-item-tienda">
                       <p>{item.descripcion}</p>
                     </div>
                     <a
                       style={{ margin: 0 }}
-                      href={item.link}
+                      href="https://wa.me/+5493498500775?text=Hola te comunicaste con Repiqueterea, dejame un mensajito que me comunico en un minuto :)"
                       className="btn-main"
                       rel="noreferrer"
                       target="_blank"
                     >
-                      Ver en Instagram
+                      ¡Quiero uno!
                     </a>
                   </div>
                 );
@@ -76,4 +70,4 @@ const SeccionDeTrabajosFeria = () => {
   );
 };
 
-export { SeccionDeTrabajosFeria };
+export { SeccionDeTrabajosTienda };

@@ -35,7 +35,7 @@ const Header = () => {
             <Link to={QUIEN_SOY_ROUTE}>¿Quién soy?</Link>
           </li>
           <li>
-            <Link to={QUE_HAGO_ROUTE}>¿Qué hago?</Link>
+            <Link to='/'>¿Qué hago?</Link>
             <ul>
               <li>
                 <Link to={ILUSTRACIONES}>ILUSTRACIONES</Link>

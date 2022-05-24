@@ -7,6 +7,7 @@ import {
   getAllPersonajes,
   getAllBlog,
   getAllFeria,
+  getAllTienda
 } from "../../../backend/functions/getAll";
 import {
   deleteIlustracion,
@@ -14,11 +15,14 @@ import {
   deletePersonajes,
   deleteBlog,
   deleteFeria,
+  deleteTienda
 } from "../../../backend/functions/delete";
 import { AñadirModal } from "../components/AñadirModal/AñadirModal";
 import { EditarModal } from "../components/EditarModal/EditarModal";
 import { AñadirModalFeria } from "../components/AñadirModalFeria/AñadirModalFeria";
 import { EditarModalFeria } from "../components/EditarModalFeria/EditarModalFeria";
+import { AñadirModalTienda } from "../components/AñadirModalTienda/AñadirModalTienda";
+import { EditarModalTienda } from "../components/EditarModalTienda/EditarModalTienda";
 
 const Home = () => {
   const [ilustraciones, setIlustraciones] = useState([]);
@@ -26,6 +30,8 @@ const Home = () => {
   const [personajes, setPersonajes] = useState([]);
   const [blog, setBlog] = useState([]);
   const [ferias, setFeria] = useState([]);
+  const [tienda, setTienda] = useState([]);
+
   const [isModalAñadir, setIsModalAñadir] = useState(false);
   const [isModalEditar, setIsModalEditar] = useState(false);
   const [productoEditar, setProductoEditar] = useState({});
@@ -33,6 +39,10 @@ const Home = () => {
   const [isModalAñadirFeria, setIsModalAñadirFeria] = useState(false);
   const [isModalEditarFeria, setIsModalEditarFeria] = useState(false);
   const [productoEditarFeria, setProductoEditarFeria] = useState({});
+
+  const [isModalAñadirTienda, setIsModalAñadirTienda] = useState(false);
+  const [isModalEditarTienda, setIsModalEditarTienda] = useState(false);
+  const [productoEditarTienda, setProductoEditarTienda] = useState({});
 
   console.log("aca",productoEditarFeria)
 
@@ -53,6 +63,9 @@ const Home = () => {
     getAllFeria().then((workList) => {
       setFeria(workList);
     });
+    getAllTienda().then((workList) => {
+      setTienda(workList);
+    });
   }
 
   function addWork() {
@@ -61,6 +74,10 @@ const Home = () => {
 
   function addFeria() {
     setIsModalAñadirFeria(true);
+  }
+
+  function addTienda() {
+    setIsModalAñadirTienda(true);
   }
 
   useEffect(() => {
@@ -97,6 +114,20 @@ const Home = () => {
           setProductoEditarFeria={setProductoEditarFeria}
         />
       )}
+      <AñadirModalTienda
+        isModalAñadirTienda={isModalAñadirTienda}
+        setIsModalAñadirTienda={setIsModalAñadirTienda}
+        actualizarEstadoProductos={updateWorks}
+      />
+      {productoEditarTienda && (
+        <EditarModalTienda
+          isModalEditarTienda={isModalEditarTienda}
+          setIsModalEditarTienda={setIsModalEditarTienda}
+          actualizarEstadoProductos={updateWorks}
+          productoEditarTienda={productoEditarTienda}
+          setProductoEditarTienda={setProductoEditarTienda}
+        />
+      )}
       <HeaderLogin />
       <hr />
       <Stack direction="horizontal" className="justify-content-between p-3">
@@ -108,7 +139,7 @@ const Home = () => {
           {" "}
           Añadir Feria
         </button>
-        <button className="btn-main" onClick={addWork}>
+        <button className="btn-main" onClick={addTienda}>
           {" "}
           Añadir Tienda
         </button>
@@ -401,18 +432,21 @@ const Home = () => {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Cliente</th>
-            <th>Imágen resumen</th>
-            <th>Categoría</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>URL de imagen</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {ferias &&
-            ferias.map((prod) => (
+          {tienda &&
+            tienda.map((prod) => (
               <tr key={prod.sku}>
                 <td>{prod.sku}</td>
-                <td>{prod.cliente}</td>
+                <td>{prod.nombre}</td>
+                <td>{prod.precio}</td>
+                <td>{prod.stock}</td>
                 <td style={{ width: 100 }}>
                   <img
                     style={{ width: 100 }}
@@ -420,14 +454,13 @@ const Home = () => {
                     alt="imágen de trabajo"
                   ></img>
                 </td>
-                <td>{prod.categoria}</td>
                 <td>
                   <Button
                     className="m-1"
                     variant="dark"
                     onClick={() => {
-                      setProductoEditarFeria({ ...prod });
-                      setIsModalEditarFeria(true);
+                      setProductoEditarTienda({ ...prod });
+                      setIsModalEditarTienda(true);
                     }}
                   >
                     Editar
@@ -435,7 +468,7 @@ const Home = () => {
                   <Button
                     variant="danger"
                     onClick={() =>
-                      deleteFeria(prod).then((confirmacion) => {
+                      deleteTienda(prod).then((confirmacion) => {
                         updateWorks();
                       })
                     }
