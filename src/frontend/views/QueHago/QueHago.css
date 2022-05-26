@@ -1,0 +1,30 @@
+.señalador {
+    width: 10px;
+    height: 10px;
+    padding: .4rem;
+    margin: .3rem;
+    border-radius: 50%;
+    animation: fluido 3s ease-in-out infinite;
+    background: linear-gradient(-45deg, #ee765255, #e73c7e62, #23a5d566, #23d5ab62);
+    background-size: 300%;
+    display: inline-block;
+}
+
+.links-que-hago {
+    text-decoration: none !important;
+    color: palevioletred !important;
+    cursor: pointer;
+}
+
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+}
+
+@media (max-width: 780px) {
+    .section-trabajamos-juntos {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

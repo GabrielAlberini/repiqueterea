@@ -44,14 +44,6 @@ const SeccionDeTrabajos = ({ title, categoria }) => {
       <Layout>
         <section className="section-main-works">
           <Title title={title} />
-          {/* <article className="cont-txt">
-            <p>En esta sección encontrás mis proyectos de ilustraciones.</p>
-            <p>
-              En general, me encanta convertir una idea en en un dibujo porque
-              tengo la sensación de que pasan a la eternidad. Como los dibujos
-              animados de cuando eramos niñes.
-            </p>
-          </article> */}
           <article className="cont-items-main">
             {itemList ? (
               itemList.map((item) => {

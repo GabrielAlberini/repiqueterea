@@ -46,3 +46,33 @@
 .cont-button {
     margin: 1rem 0;
 }
+
+@media (max-width: 780px) {
+    .cont-items-main {
+        margin-top: 3rem;
+    }
+
+    .cont-item {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .cont-img-item {
+        width: 100%;
+    }
+
+    .cont-item-reverse {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .cont-txt-item {
+        width: 100%;
+    }
+}

@@ -15,16 +15,7 @@ footer div {
     align-items: center;
 }
 
-footer svg {
-    width: 50px;
-    padding: 15px;
-    cursor: pointer;
-}
 
-footer svg:hover {
-    fill: rgb(171, 29, 171);
-    transition: .3s ease;
-}
 
 footer p {
     text-align: center;

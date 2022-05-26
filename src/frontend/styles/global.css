@@ -27,6 +27,10 @@
     font-family: 'cuerpo';
 }
 
+p {
+    line-height: 2;
+}
+
 /*Botón primario*/
 .btn-main {
     width: 200px;
@@ -67,6 +71,13 @@ padding: 2rem 0;
 
 .img-loader {
     width: 100%;
+}
+
+/*Texto coloreado*/
+
+.texto-coloreado {
+    padding: 0 .3rem;
+    background: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
 }
 
 @keyframes rotation {

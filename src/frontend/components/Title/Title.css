@@ -1,5 +1,4 @@
 .cont-title-component {
-    background-color: red;
     width: 80%;
     margin: 4rem auto 6rem auto;
     animation: fluido 3s ease-in-out infinite;
@@ -24,8 +23,22 @@
 }
 
 @media (max-width: 780px) {
+    .cont-title-component {
+        width: 100%;
+        margin: 2rem auto 1rem auto;
+        animation: fluido 3s ease-in-out infinite;
+        background: linear-gradient(-45deg, #ee765255, #e73c7e62, #23a5d566, #23d5ab62);
+        background-size: 300%;
+        border-radius: 5px;
+        color: white;
+    }
+
     .section-title {
-        padding: 1rem 4rem;
-        font-size: 2rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        font-family: 'titulo';
+        letter-spacing: 0px;
+        text-align: center;
+        margin: 0;
     }
 }

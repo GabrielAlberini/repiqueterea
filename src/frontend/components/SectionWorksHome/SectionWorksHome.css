@@ -10,10 +10,6 @@
     padding: 2rem 0 1rem 0;
 }
 
-.section-works span {
-    background: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
-}
-
 .cont-item-work {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

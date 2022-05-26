@@ -8,7 +8,7 @@ const SectionWorksHome = () => {
     <section className="section-works">
       <h2>Proyectos</h2>
       <p>
-        En la pestañita <span>¿Qué hago?</span> estará todo, peeeero, va una
+        En la pestañita <span className='texto-coloreado'>¿Qué hago?</span> estará todo, peeeero, va una
         pequeña descripción.
       </p>
       <article className="cont-item-work">

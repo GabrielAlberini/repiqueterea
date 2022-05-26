@@ -23,14 +23,9 @@ const SeccionDeTrabajosBlog = () => {
     <>
       <Layout>
         <section className="section-main-works">
-          <Title title="Blog personal" />
+          <Title title="Blog" />
           <article className="cont-txt">
-            <p>En esta sección encontrás mis proyectos de ilustraciones.</p>
-            <p>
-              En general, me encanta convertir una idea en en un dibujo porque
-              tengo la sensación de que pasan a la eternidad. Como los dibujos
-              animados de cuando eramos niñes.
-            </p>
+            <p>En este blog recopilo mis experimentos y reflexiones sobre arte, derechos de los artistas, feminismo, consumo responsable, creatividad, educación, medio ambiente, salud mental, colaboración, activismo y cualquier tema que sienta que me ayuda a entender mejor mi relación mundo. Podría decir que este blog es algo así como mi cuaderno de observación de la vida en la Tierra.</p>
           </article>
           <article className="cont-items-main-blog">
             {itemsBlog ? (

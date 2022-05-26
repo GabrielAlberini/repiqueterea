@@ -1,0 +1,8 @@
+.item {
+    margin: 1rem;
+}
+
+.item > a {
+    width: 100%;
+    margin: 1rem 0;
+}
