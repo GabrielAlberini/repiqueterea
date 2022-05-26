@@ -35,3 +35,18 @@
     width: 100%;
     margin-top: 1rem;
 }
+
+@media (max-width: 780px) {
+    .cont-txt-tienda {
+        margin-top: 3rem;
+    }
+
+    .cont-items-main-tienda {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .cont-item-tienda {
+        padding: 0;
+    }
+}

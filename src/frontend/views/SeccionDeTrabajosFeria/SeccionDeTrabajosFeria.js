@@ -24,7 +24,7 @@ const SeccionDeTrabajosFeria = () => {
       <Layout>
         <section className="section-main-works">
           <Title title="Expo y Ferias" />
-          <article className="cont-txt">
+          <article className="cont-txt-feria">
             <p>Aquí podrás ver cuales son las siguientes fechas de ferias</p>
             <p>
               Parte importante de mi trabajo es el intercambio que se producen

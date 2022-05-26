@@ -19,11 +19,11 @@
     letter-spacing: -1px;
 }
 
-.cont-img-item-fera {
+.cont-img-item-feria {
     width: 100%;
 }
 
-.img-item-fera {
+.img-item-feria {
     width: 100%;
     margin: auto;
 }
@@ -31,4 +31,19 @@
 .cont-txt-item-feria {
     width: 100%;
     margin-top: 1rem;
+}
+
+@media (max-width: 780px) {
+    .cont-txt-feria {
+        margin-top: 3rem;
+    }
+
+    .cont-items-main-feria {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .cont-item-feria {
+        padding: 0;
+    }
 }

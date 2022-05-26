@@ -56,17 +56,13 @@
 }
 
 @media (max-width: 780px) {
-
     .section-works {
+        width: 100%;
         margin-bottom: 0;
     }
 
     .cont-item-work {
         display: flex;
         flex-direction: column;
-    }
-
-    .section-works p {
-        text-align: center;
     }
 }

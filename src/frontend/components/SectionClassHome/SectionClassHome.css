@@ -21,8 +21,4 @@
         flex-direction: column-reverse;
         margin: 3rem 0;
     }
-
-    .section-class p {
-        text-align: center;
-    }
 }

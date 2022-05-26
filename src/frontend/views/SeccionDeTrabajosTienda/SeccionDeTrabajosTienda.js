@@ -24,7 +24,7 @@ const SeccionDeTrabajosTienda = () => {
       <Layout>
         <section className="section-main-works">
           <Title title="Tienda" />
-          <article className="cont-txt">
+          <article className="cont-txt-tienda">
             <p>Y como se trata de ir haciendo de a todo para llegar a ser un artista independiente, en esta sección podrás algunas cositas que ofrezco.</p>
             <p>
               Son ideales como regalo, decorar un hambiente, hacer cuadritos, guardar cositas. Mandame un mensaje y coordinamos para que tengas tu Repiquelemento jaja.
