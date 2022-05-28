@@ -33,6 +33,11 @@
     margin-top: 1rem;
 }
 
+.cont-txt-feria {
+    width: 80%;
+    margin: auto;
+}
+
 @media (max-width: 780px) {
     .cont-txt-feria {
         margin-top: 3rem;
