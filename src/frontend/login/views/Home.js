@@ -7,7 +7,8 @@ import {
   getAllPersonajes,
   getAllBlog,
   getAllFeria,
-  getAllTienda
+  getAllTienda,
+  getAllClase,
 } from "../../../backend/functions/getAll";
 import {
   deleteIlustracion,
@@ -15,7 +16,8 @@ import {
   deletePersonajes,
   deleteBlog,
   deleteFeria,
-  deleteTienda
+  deleteTienda,
+  deleteClase,
 } from "../../../backend/functions/delete";
 import { AñadirModal } from "../components/AñadirModal/AñadirModal";
 import { EditarModal } from "../components/EditarModal/EditarModal";
@@ -23,6 +25,8 @@ import { AñadirModalFeria } from "../components/AñadirModalFeria/AñadirModalF
 import { EditarModalFeria } from "../components/EditarModalFeria/EditarModalFeria";
 import { AñadirModalTienda } from "../components/AñadirModalTienda/AñadirModalTienda";
 import { EditarModalTienda } from "../components/EditarModalTienda/EditarModalTienda";
+import { AñadirModalClase } from "../components/AñadirModalClase/AñadirModalClase";
+import { EditarModalClase } from '../components/EditarModalClase/EditarModalClase';
 
 const Home = () => {
   const [ilustraciones, setIlustraciones] = useState([]);
@@ -31,6 +35,7 @@ const Home = () => {
   const [blog, setBlog] = useState([]);
   const [ferias, setFeria] = useState([]);
   const [tienda, setTienda] = useState([]);
+  const [clases, setClases] = useState([]);
 
   const [isModalAñadir, setIsModalAñadir] = useState(false);
   const [isModalEditar, setIsModalEditar] = useState(false);
@@ -44,7 +49,9 @@ const Home = () => {
   const [isModalEditarTienda, setIsModalEditarTienda] = useState(false);
   const [productoEditarTienda, setProductoEditarTienda] = useState({});
 
-  console.log("aca",productoEditarFeria)
+  const [isModalAñadirClase, setIsModalAñadirClase] = useState(false);
+  const [isModalEditarClase, setIsModalEditarClase] = useState(false);
+  const [productoEditarClase, setProductoEditarClase] = useState({});
 
   //Actualizar Trabajos de Portfolio
   function updateWorks() {
@@ -66,6 +73,9 @@ const Home = () => {
     getAllTienda().then((workList) => {
       setTienda(workList);
     });
+    getAllClase().then((workList) => {
+      setClases(workList);
+    });
   }
 
   function addWork() {
@@ -78,6 +88,10 @@ const Home = () => {
 
   function addTienda() {
     setIsModalAñadirTienda(true);
+  }
+
+  function addClase() {
+    setIsModalAñadirClase(true);
   }
 
   useEffect(() => {
@@ -128,6 +142,20 @@ const Home = () => {
           setProductoEditarTienda={setProductoEditarTienda}
         />
       )}
+      <AñadirModalClase
+        isModalAñadirClase={isModalAñadirClase}
+        setIsModalAñadirClase={setIsModalAñadirClase}
+        actualizarEstadoProductos={updateWorks}
+      />
+      {productoEditarTienda && (
+        <EditarModalClase
+          isModalEditarClase={isModalEditarClase}
+          setIsModalEditarClase={setIsModalEditarClase}
+          actualizarEstadoProductos={updateWorks}
+          productoEditarClase={productoEditarClase}
+          setProductoEditarClase={setProductoEditarClase}
+        />
+      )}
       <HeaderLogin />
       <hr />
       <Stack direction="horizontal" className="justify-content-between p-3">
@@ -142,6 +170,10 @@ const Home = () => {
         <button className="btn-main" onClick={addTienda}>
           {" "}
           Añadir Tienda
+        </button>
+        <button className="btn-main" onClick={addClase}>
+          {" "}
+          Añadir Clase
         </button>
       </Stack>
       <hr />
@@ -469,6 +501,70 @@ const Home = () => {
                     variant="danger"
                     onClick={() =>
                       deleteTienda(prod).then((confirmacion) => {
+                        updateWorks();
+                      })
+                    }
+                  >
+                    Borrar
+                  </Button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </Table>
+      <Stack direction="horizontal" className="justify-content-between p-3">
+        <h2>Clases</h2>
+      </Stack>
+      <hr />
+      <Table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Tema</th>
+            <th>URLimagen</th>
+            <th>URLtarea</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {clases &&
+            clases.map((prod) => (
+              <tr key={prod.sku}>
+                <td>{prod.sku}</td>
+                <td>{prod.nombre}</td>
+                <td>{prod.fecha}</td>
+                <td>{prod.tema}</td>
+                <td style={{ width: 100 }}>
+                  <img
+                    style={{ width: 100 }}
+                    src={prod.URLimagen}
+                    alt="imágen de trabajo"
+                  ></img>
+                </td>
+                <td style={{ width: 100 }}>
+                  <img
+                    style={{ width: 100 }}
+                    src={prod.URLtarea}
+                    alt="imágen de trabajo"
+                  ></img>
+                </td>
+                <td>
+                  <Button
+                    className="m-1"
+                    variant="dark"
+                    onClick={() => {
+                      setProductoEditarClase({ ...prod });
+                      setIsModalEditarClase(true);
+                    }}
+                  >
+                    Editar
+                  </Button>
+                  <Button
+                    variant="danger"
+                    onClick={() =>
+                      deleteClase(prod).then((confirmacion) => {
                         updateWorks();
                       })
                     }

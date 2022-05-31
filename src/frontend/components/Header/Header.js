@@ -3,17 +3,16 @@ import {
   QUIEN_SOY_ROUTE,
   QUE_HAGO,
   TRABAJAMOS_JUNTOS_ROUTE,
-  DONDE_ME_ENCONTRAS_ROUTE,
   ILUSTRACIONES,
   MASCOTAS,
   PERSONAJES,
   BLOG_PERSONAL,
   EXPO_FERIAS,
   TIENDA,
+  SECTION_CLASS_ROUTE
 } from "../../services/routesHeader";
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo/Logo";
-import { LinksContacto } from "../LinksContacto/LinksContacto";
 
 const Header = () => {
   return (
@@ -54,6 +53,7 @@ const Header = () => {
               </li>
               <li>
                 <Link to={BLOG_PERSONAL}>BLOG PERSONAL</Link>
+                <Link to={SECTION_CLASS_ROUTE}>CLASES</Link>
               </li>
             </ul>
           </li>

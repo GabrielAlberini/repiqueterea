@@ -11,21 +11,24 @@ import {
   EXPO_FERIAS,
   TIENDA,
   ADMIN_ROUTE,
-  SECTION_CLASS_ROUTE
+  SECTION_CLASS_ROUTE,
+  DETALLE_DE_CLASE
 } from "./frontend/services/routesHeader";
 import { QuienSoy } from './frontend/views/QuienSoy/QuienSoy';
 import { QueHago } from './frontend/views/QueHago/QueHago';
 import { TrabajamosJuntos } from './frontend/views/TrabajamosJuntos/TrabajamosJuntos';
-import { DondeMeEncontras } from './frontend/views/DondeMeEncontras/DondeMeEncontras';
 // import { NotFound } from './views/NotFound/NotFound'
 import { SectionClass } from "./frontend/views/SectionClass/SectionClass";
 import { DashboardLogin } from './frontend/login/views/DashboardLogin';
+
 //Vistas de tipos de trabajo
 import { SeccionDeTrabajos } from "./frontend/views/SeccionDeTrabajos/SeccionDeTrabajos";
 import { SeccionDeTrabajosBlog } from "./frontend/views/SeccionDeTrabajosBlog/SeccionDeTrabajosBlog";
 import { SeccionDeTrabajosFeria } from "./frontend/views/SeccionDeTrabajosFeria/SeccionDeTrabajosFeria";
 import { SeccionDeTrabajosTienda } from "./frontend/views/SeccionDeTrabajosTienda/SeccionDeTrabajosTienda";
 
+/*Detalle de clase*/
+import { DetalleDeClase } from "./frontend/views/DetalleDeClase/DetalleDeClase";
 
 const Router = () => {
   return (
@@ -43,6 +46,7 @@ const Router = () => {
           <Route path={TRABAJAMOS_JUNTOS_ROUTE} element={<TrabajamosJuntos />}></Route>
           {/* <Route path={DONDE_ME_ENCONTRAS_ROUTE} element={<DondeMeEncontras />}></Route> */}
           <Route path={SECTION_CLASS_ROUTE} element={<SectionClass />}></Route>
+          <Route path={`${DETALLE_DE_CLASE}/:sku`} element={<DetalleDeClase />}></Route>
           <Route path={ADMIN_ROUTE} element={<DashboardLogin />}></Route>
           {/* <Route path="/*" element={<NotFound />}></Route> */}
         </Routes>

@@ -39,4 +39,10 @@ function addTienda(infoProducto) {
   setDoc(docRef, infoProducto);
 }
 
-export { addIlustracion, addMascotas, addPersonajes, addBlog, addFeria, addTienda };
+function addClase(infoProducto) {
+  const collectionRef = collection(db, "clases");
+  const docRef = doc(collectionRef, infoProducto.sku);
+  setDoc(docRef, infoProducto);
+}
+
+export { addIlustracion, addMascotas, addPersonajes, addBlog, addFeria, addTienda, addClase };

@@ -15,6 +15,9 @@ const TIENDA = "/tienda";
 //Class Route
 const SECTION_CLASS_ROUTE = '/clases'
 
+//Detalle de clase
+const DETALLE_DE_CLASE = '/clase-numero';
+
 //Login
 const ADMIN_ROUTE = '/admin';
 
@@ -33,6 +36,8 @@ export {
   TIENDA,
   //Class Route
   SECTION_CLASS_ROUTE,
+  //Detalle de clase
+  DETALLE_DE_CLASE,
   //Login
   ADMIN_ROUTE
 };
