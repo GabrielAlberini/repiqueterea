@@ -33,9 +33,9 @@ const Header = () => {
           <li>
             <Link to={QUIEN_SOY_ROUTE}>¿Quién soy?</Link>
           </li>
-          <li>
-            <Link to={QUE_HAGO}>¿Qué hago?</Link>
-            <ul>
+          <li className="menu-desplegable">
+            <Link to={QUE_HAGO}>¿Qué hago? <span className="menu-desplegable-icon">+</span></Link>
+            <ul className="ul-desplegable">
               <li>
                 <Link to={ILUSTRACIONES}>ILUSTRACIONES</Link>
               </li>

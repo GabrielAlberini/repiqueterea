@@ -61,7 +61,7 @@ header nav ul li ul li ul{
 
 header nav ul li:focus-within > ul,
 header nav ul li:hover > ul {
-    display: initial;
+    display: block;
 }
 
 #menu-bar {
@@ -77,6 +77,13 @@ header label {
 .link-instagram > a{
     padding: 0;
     margin: .5rem;
+}
+
+.menu-desplegable span {
+    font-weight: bold;
+    padding: .4rem .6rem;
+    margin-left: .3rem;
+    border-radius: 5px;
 }
 
 @media (max-width: 780px) {
