@@ -58,7 +58,7 @@ const Header = () => {
             </ul>
           </li>
           <li>
-            <Link to={TRABAJAMOS_JUNTOS_ROUTE}>¿Cómo trabajamos juntos?</Link>
+            <Link to={TRABAJAMOS_JUNTOS_ROUTE}>¿Cómo nos contactamos?</Link>
           </li>
           <li className="link-instagram">
           <a href="https://www.instagram.com/repiqueterea.art/"

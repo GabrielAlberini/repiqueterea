@@ -25,12 +25,15 @@ const SeccionDeTrabajosFeria = () => {
         <section className="section-main-works">
           <Title title="Expo y Ferias" />
           <article className="cont-txt-feria">
-            <p>Aquí podrás ver cuales son las siguientes fechas de ferias</p>
+            <p>
+              Aquí podrás encontrar info sobre las próximas ferias y eventos en
+              los que participo.
+            </p>
             <p>
               Parte importante de mi trabajo es el intercambio que se producen
-              en las ferias. De esta forma los artistas independientes podemos
-              seguir sosteniendonos y autogestionando todo nuestro material. Así
-              que espero verte en alguna.
+              en las ferias. De esta forma lxs artistas independientes
+              sostenemos nuestros proyectos y autogestionamos todo nuestro
+              material. ¡Te espero la próxima!
             </p>
           </article>
           <article className="cont-items-main-feria">

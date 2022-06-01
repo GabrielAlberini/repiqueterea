@@ -25,9 +25,15 @@ const SeccionDeTrabajosTienda = () => {
         <section className="section-main-works">
           <Title title="Tienda" />
           <article className="cont-txt-tienda">
-            <p>Y como se trata de ir haciendo de a todo para llegar a ser un artista independiente, en esta sección podrás algunas cositas que ofrezco.</p>
             <p>
-              Son ideales como regalo, decorar un hambiente, hacer cuadritos, guardar cositas. Mandame un mensaje y coordinamos para que tengas tu Repiquelemento jaja.
+              El arte ilustrado puede ser un excelente regalo o autorregalo.
+              Siempre es un mimo pensar en una ilustración personalizada,
+              cuadritos, cuadernitos o arte digital en pequeños formatos para
+              otrxs o unx mismo.
+            </p>
+            <p>
+              Por eso, en esta en esta sección podrás encontrar muchísimos 
+              repiqueobjetos para comprar.
             </p>
           </article>
           <article className="cont-items-main-tienda">
@@ -44,7 +50,7 @@ const SeccionDeTrabajosTienda = () => {
                         src={item.URLimagen}
                         alt={item.titulo}
                       />
-                    </div>                   
+                    </div>
                     <div className="cont-txt-item-tienda">
                       <p>{item.descripcion}</p>
                     </div>

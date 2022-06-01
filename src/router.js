@@ -48,7 +48,6 @@ const Router = () => {
           <Route path={SECTION_CLASS_ROUTE} element={<SectionClass />}></Route>
           <Route path={`${DETALLE_DE_CLASE}/:sku`} element={<DetalleDeClase />}></Route>
           <Route path={ADMIN_ROUTE} element={<DashboardLogin />}></Route>
-          {/* <Route path="/*" element={<NotFound />}></Route> */}
         </Routes>
       </BrowserRouter>
     </>

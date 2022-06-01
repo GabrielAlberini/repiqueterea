@@ -9,7 +9,7 @@ const QuienSoy = () => {
   return (
     <>
       <Layout>
-        <Title title={'Repiqueterea'}/>
+        <Title title={'Repiquetérea'}/>
         <SectionBioHome />
         <SectionWorksHome />
         <SectionClassHome />

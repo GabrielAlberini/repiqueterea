@@ -26,21 +26,21 @@ const ITEMS_WORKS = [
     img: "https://i.ibb.co/8NwDZzC/barba-Personajes.png",
     alt: "Imagen de ilustración",
     title: "PERSONAJES",
-    description: "Desde Ricardo Fort a Elon Musk, ¡desafiame!",
+    description: "Desde Ricardo Fort a Gilda, ¡desafiame!",
     route: PERSONAJES
   },
   {
     img: "https://i.ibb.co/ZcTYd2X/dibujo-Blog.png",
     alt: "Imagen de ilustración",
     title: "BLOG PERSONAL",
-    description: "Un espacio para compartir datita con ustedes",
+    description: "Un espacio para compartir experiencias",
     route: BLOG_PERSONAL
   },
   {
     img: "https://i.ibb.co/p26HFS3/giuli-feria.jpg",
     alt: "Imagen de ilustración",
     title: "EXPO / FERIAS",
-    description: "También existo de verdad, me podes encontrar en... (jaja)",
+    description: "También me podes encontrar en ferias y eventos",
     route: EXPO_FERIAS
   },
   {
