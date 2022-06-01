@@ -7,7 +7,7 @@ const ModalImagenDetalleClase = ({
   URLtarea,
 }) => {
   return (
-    <Modal show={isModalAñadir} onHide={() => setIsModalAñadir(false)}>
+    <Modal centered show={isModalAñadir} onHide={() => setIsModalAñadir(false)}>
       <Modal.Header>
         <Modal.Title>Imágen de actividad</Modal.Title>
       </Modal.Header>
