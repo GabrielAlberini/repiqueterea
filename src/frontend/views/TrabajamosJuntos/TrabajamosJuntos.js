@@ -45,7 +45,7 @@ const TrabajamosJuntos = () => {
           <div className="cont-main-img-trabajamos-juntos">
             <div>
               <img
-                src="https://i.ibb.co/9WBq1wf/1.jpg"
+                src="https://i.ibb.co/VLCw2Hp/3.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
@@ -57,7 +57,7 @@ const TrabajamosJuntos = () => {
             </div>
             <div>
               <img
-                src="https://i.ibb.co/VLCw2Hp/3.jpg"
+                src="https://i.ibb.co/9WBq1wf/1.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
