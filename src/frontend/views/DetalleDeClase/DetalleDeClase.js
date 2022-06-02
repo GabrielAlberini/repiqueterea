@@ -32,7 +32,7 @@ const DetalleDeClase = () => {
         <ModalImagenDetalleClase
           isModalAñadir={isModalAñadir}
           setIsModalAñadir={setIsModalAñadir}
-          URLtarea={clase.URLimagen}
+          URLtarea={clase.URLtarea}
         />
         {loader ? (
           <section className="cont-loader-detalle">
