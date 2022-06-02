@@ -80,11 +80,33 @@ padding: 2rem 0;
     background: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
 }
 
+/*Botón subir arriba*/
+
+.btn-to-up {
+    position: fixed;
+    bottom: 110px;
+    right: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background: rgba(64, 224, 208, 0.548);
+}
+
 @keyframes rotation {
     0% {
       transform:rotate(0deg);
     }
     100% {
       transform:rotate(360deg);
+    }
+}
+
+@media (max-width: 780px) {
+    .btn-to-up {
+        bottom: 20px;
+        right: 20px;
     }
 }
