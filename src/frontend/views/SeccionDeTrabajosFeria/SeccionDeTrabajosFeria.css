@@ -1,5 +1,5 @@
 .cont-items-main-feria {
-    width: 85%;
+    width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

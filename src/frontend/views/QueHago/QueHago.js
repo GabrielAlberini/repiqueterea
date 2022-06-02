@@ -37,7 +37,7 @@ const QueHago = () => {
               </Link>
             </p>
           </div>
-          <div>
+          <div className="cont-slider-que-hago">
             <GaleriaDeImagenes />
           </div>
           <div className="cont-main-img-trabajamos-juntos">

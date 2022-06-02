@@ -10,6 +10,10 @@
     display: inline-block;
 }
 
+.cont-slider-que-hago {
+    margin: 6rem 0;
+}
+
 .links-que-hago {
     text-decoration: none !important;
     color: palevioletred !important;
@@ -26,5 +30,9 @@
     .section-trabajamos-juntos {
         width: 100%;
         margin-top: 2rem;
+    }
+
+    .cont-slider-que-hago {
+        margin: 2rem 0;
     }
 }

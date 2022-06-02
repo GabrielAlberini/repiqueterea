@@ -1,11 +1,10 @@
 .cont-items-main-blog {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
 .cont-item-blog {
-    padding: 1rem;
-    margin-bottom: 3rem;
+    margin: 6rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,4 +27,15 @@
 
 .cont-txt-item-blog > h4 {
     font-weight: bold;
+}
+
+@media (max-width: 780px) {
+    .cont-item-blog {
+        margin: 3rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
