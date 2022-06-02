@@ -84,8 +84,8 @@ padding: 2rem 0;
 
 .btn-to-up {
     position: fixed;
-    bottom: 110px;
-    right: 10px;
+    bottom: 80px;
+    right: 30px;
     padding: 0;
     display: flex;
     justify-content: center;
