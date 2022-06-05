@@ -66,8 +66,8 @@ const Header = () => {
             <Link to={TRABAJAMOS_JUNTOS_ROUTE}>¿Cómo nos contactamos?</Link>
           </li>
           <li>
-            <Link to="/principito.pdf" target="_blank" download>
-              Download
+            <Link className="link-cv" to="/principito.pdf" target="_blank" download>
+              Descargar CV
             </Link>
           </li>
           <li className="link-instagram">

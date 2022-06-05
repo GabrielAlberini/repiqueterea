@@ -86,6 +86,13 @@ header label {
     border-radius: 5px;
 }
 
+/*Link CV*/
+.link-cv {
+    margin-left: .5rem;
+    background-color: var(--bg-link-cv);
+    color: white;
+}
+
 @media (max-width: 780px) {
     header {
         padding: 20px;
