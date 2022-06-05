@@ -95,7 +95,7 @@ header label {
 
 @media (max-width: 780px) {
     header {
-        padding: 20px;
+        padding: 20px;  
     }
 
     header label {
@@ -108,6 +108,9 @@ header label {
         background-color: #fff;
         border-top: 1px solid rgba(0, 0, 0, .1);
         display: none;
+        box-shadow: 1px -3px 34px 0px rgba(110,110,110,0.75);
+        -webkit-box-shadow: 1px -3px 34px 0px rgba(110,110,110,0.75);
+        -moz-box-shadow: 1px -3px 34px 0px rgba(110,110,110,0.75);
     }
 
     header nav ul {
