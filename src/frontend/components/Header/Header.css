@@ -9,6 +9,7 @@ header {
     background: var(--bg-degrade-radial);
     z-index: 1000;
     position: fixed;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.3);
 }
 
 /*Navegación*/
