@@ -4,9 +4,15 @@ import { useState, useEffect } from "react";
 import { getAllFeria } from "../../../backend/functions/getAll";
 import { Loader } from "../../components/Loader/Loader";
 import { Title } from "../../components/Title/Title";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const SeccionDeTrabajosFeria = () => {
   const [itemsBlog, setItemsBlog] = useState();
+
+  /*SEO titulo y descripción*/
+  const title = "Expo | Ferias - Repiquetérea";
+  const description =
+    "En ésta sección podrás ver las diferentes ferias en las que participaré.";
 
   //Actualizar Trabajos de Portfolio
   function updateWorks() {
@@ -23,6 +29,7 @@ const SeccionDeTrabajosFeria = () => {
     <>
       <Layout>
         <section className="section-main-works">
+          <SEOComponent title={title} description={description} />
           <Title title="Expo y Ferias" />
           <article className="cont-txt-feria">
             <p>
@@ -70,7 +77,10 @@ const SeccionDeTrabajosFeria = () => {
                 );
               })
             ) : (
-              <Loader />
+              <>
+                <SEOComponent title={"Cargando..."} />
+                <Loader />
+              </>
             )}
           </article>
         </section>

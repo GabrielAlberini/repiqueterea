@@ -3,11 +3,16 @@ import { Layout } from "../../components/Layout/Layout";
 import { Title } from "../../components/Title/Title";
 import { GaleriaDeImagenes } from "../../components/OwlCarousel/OwlCarousel";
 import { Link } from "react-router-dom";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const QueHago = () => {
+  const title = 'Que hago | Repiquetérea';
+  const description = 'Sección donde comaparto mis diferentes tipos de trabajos. Entre ellos están: ilustraciones, collages, arte digital y también hay cuento con un blog.';
+  
   return (
     <>
       <Layout>
+        <SEOComponent title={title} description={description} />
         <Title title="Qué hago" />
         <section className="section-trabajamos-juntos">
           <div>

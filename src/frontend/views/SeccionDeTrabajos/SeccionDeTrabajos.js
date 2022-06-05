@@ -8,9 +8,13 @@ import {
 } from "../../../backend/functions/getAll";
 import { Loader } from "../../components/Loader/Loader";
 import { Title } from "../../components/Title/Title";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const SeccionDeTrabajos = ({ title, categoria }) => {
   const [itemList, setItemList] = useState();
+
+  /*SEO descripción*/
+  const description = `Sección donde podrás encontrar mis trabajos de ${title}`  
 
   //Actualizar Trabajos de Portfolio
   function updateWorks() {
@@ -43,6 +47,7 @@ const SeccionDeTrabajos = ({ title, categoria }) => {
     <>
       <Layout>
         <section className="section-main-works">
+          <SEOComponent title={`${title} | Repiquetérea`} description={description}/>
           <Title title={title} />
           <article className="cont-items-main">
             {itemList ? (
@@ -124,7 +129,10 @@ const SeccionDeTrabajos = ({ title, categoria }) => {
                 }
               })
             ) : (
+              <>
+              <SEOComponent title={'Cargando...'} />
               <Loader />
+              </>
             )}
           </article>
         </section>

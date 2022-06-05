@@ -4,9 +4,15 @@ import { useState, useEffect } from "react";
 import { getAllBlog } from "../../../backend/functions/getAll";
 import { Loader } from "../../components/Loader/Loader";
 import { Title } from "../../components/Title/Title";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const SeccionDeTrabajosBlog = () => {
   const [itemsBlog, setItemsBlog] = useState();
+
+  /*SEO titulo y descripción*/
+  const title = "Blog | Repiquetérea";
+  const description =
+    "En ésta sección podrás ver diferentes posteos de temas que me gustan o interpelan y una interpretación personal, que lo disfrutes.";
 
   //Actualizar Trabajos de Portfolio
   function updateWorks() {
@@ -23,6 +29,7 @@ const SeccionDeTrabajosBlog = () => {
     <>
       <Layout>
         <section className="section-main-works">
+          <SEOComponent title={title} description={description} />
           <Title title="Blog" />
           <article className="cont-txt">
             <p>
@@ -68,7 +75,10 @@ const SeccionDeTrabajosBlog = () => {
                 );
               })
             ) : (
-              <Loader />
+              <>
+                <SEOComponent title={"Cargando..."} />
+                <Loader />
+              </>
             )}
           </article>
         </section>

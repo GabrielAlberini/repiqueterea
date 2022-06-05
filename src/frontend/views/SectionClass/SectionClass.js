@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { Layout } from "../../components/Layout/Layout";
 import { Title } from "../../components/Title/Title";
 import { Loader } from "../../components/Loader/Loader";
-import { getAllClase } from '../../../backend/functions/getAll';
+import { getAllClase } from "../../../backend/functions/getAll";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const SectionClass = () => {
   const [itemsClass, setItemsClass] = useState([]);
+
+  /*SEO titulo y descripción*/
+  const title = "Clases | Repiquetérea";
+  const description =
+    "En ésta sección podrás ver mis diferentes clases de arte, como las organizo y todo el material que comparto en ellas.";
 
   //Actualizar Trabajos de Portfolio
   function updateClase() {
@@ -24,6 +30,7 @@ const SectionClass = () => {
     <>
       <Layout>
         <section className="section-main-works">
+          <SEOComponent title={title} description={description} />
           <Title title="Clases" />
           <article className="cont-txt-tienda">
             <p>
@@ -38,28 +45,35 @@ const SectionClass = () => {
             </p>
           </article>
           <article className="cont-item-clase">
-            {itemsClass.length > 0 ? itemsClass.map((item) => {
-              return (
-                <Link
-                  to={`/clase-numero/${item.sku}`}
-                  key={item.title}
-                  className="item-clase-link"
+            {itemsClass.length > 0 ? (
+              itemsClass.map((item) => {
+                return (
+                  <Link
+                    to={`/clase-numero/${item.sku}`}
+                    key={item.title}
+                    className="item-clase-link"
                   >
-                  <div className="item-clase">
-                  <h4 className="title-item-clase">{item.nombre}</h4>
-                    <div className="cont-img-item-clase">
-                      <img
-                        className="img-item-clase"
-                        src={item.URLimagen}
-                        alt={item.alt}
-                      />
+                    <div className="item-clase">
+                      <h4 className="title-item-clase">{item.nombre}</h4>
+                      <div className="cont-img-item-clase">
+                        <img
+                          className="img-item-clase"
+                          src={item.URLimagen}
+                          alt={item.alt}
+                        />
+                      </div>
+                      <p className="description-item-clase">{item.fecha}</p>
+                      <p className="description-item-clase">{item.tema}</p>
                     </div>
-                    <p className="description-item-clase">{item.fecha}</p>
-                    <p className="description-item-clase">{item.tema}</p>
-                  </div>
-                </Link>
-              );
-            }) : <Loader />}
+                  </Link>
+                );
+              })
+            ) : (
+              <>
+                <SEOComponent title={"Cargando..."} />
+                <Loader />
+              </>
+            )}
           </article>
         </section>
       </Layout>

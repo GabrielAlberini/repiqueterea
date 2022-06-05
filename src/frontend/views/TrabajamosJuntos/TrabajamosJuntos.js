@@ -2,11 +2,16 @@ import "./TrabajamosJuntos.css";
 import { Layout } from "../../components/Layout/Layout";
 import { LinksContacto } from "../../components/LinksContacto/LinksContacto";
 import { Title } from "../../components/Title/Title";
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const TrabajamosJuntos = () => {
+  const title = 'Contacto | Repiquetérea';
+  const description = 'Sección donde nos podemos contactar para realizar diferentes trabajos en relación al arte, ilustraciones, arte digital o colaboraciones.';
+
   return (
     <>
       <Layout>
+      <SEOComponent title={title} description={description} />
         <Title title="Contacto" />
         <section className="section-trabajamos-juntos">
           <div>
