@@ -1,5 +1,5 @@
 import { Modal, Stack, Form, Button } from "react-bootstrap";
-import { addClase, addTienda } from "../../../../backend/functions/add";
+import { addClase } from "../../../../backend/functions/add";
 
 const AñadirModalClase = ({
   isModalAñadirClase,
