@@ -1,4 +1,5 @@
 import "./Header.css";
+import { useState } from "react";
 import {
   QUIEN_SOY_ROUTE,
   QUE_HAGO,
@@ -13,13 +14,14 @@ import {
 } from "../../services/routesHeader";
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo/Logo";
+import { DownloadCV } from "../DownloadCV/DownloadCV";
 
 const Header = () => {
-  const URL_CV =
-    "https://tn.com.ar/resizer/NgDHjpxTSD4gCzee-HvO9crnzTA=/767x0/smart/filters:quality(60)/cloudfront-us-east-1.images.arcpublishing.com/artear/LNG3ZOI33VFYPBF22RIU6VE45I.jpg";
+  const [showDownloadCV, setShowDownloadCV] = useState(false);
 
   return (
     <header>
+      <DownloadCV setShowDownloadCV={setShowDownloadCV} showDownloadCV={showDownloadCV}/>
       <Logo />
       <input type="checkbox" id="menu-bar" />
       <label htmlFor="menu-bar">
@@ -66,7 +68,9 @@ const Header = () => {
             <Link to={TRABAJAMOS_JUNTOS_ROUTE}>¿Cómo nos contactamos?</Link>
           </li>
           <li>
-            <Link className="link-cv" to="/principito.pdf" target="_blank" download>
+            <Link className="link-cv" to='/' onClick={() => {
+              setShowDownloadCV(true);
+            }}>
               Descargar CV
             </Link>
           </li>

@@ -27,7 +27,7 @@ import { SeccionDeTrabajosFeria } from "./frontend/views/SeccionDeTrabajosFeria/
 import { SeccionDeTrabajosTienda } from "./frontend/views/SeccionDeTrabajosTienda/SeccionDeTrabajosTienda";
 
 /*Detalle de clase*/
-import { DetalleDeClase } from "./frontend/views/DetalleDeClase/DetalleDeClase";
+import { DetalleDeClase } from "./frontend/components/DetalleDeClase/DetalleDeClase";
 
 const Router = () => {
   return (
