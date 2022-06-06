@@ -13,9 +13,6 @@ const DownloadCV = ({ showDownloadCV, setShowDownloadCV }) => {
       </Modal.Header>
       <Modal.Footer>
         <Stack className="container-btn-cv">
-          <button className="btn-main" onClick={() => setShowDownloadCV(false)}>
-            Cancelar
-          </button>
           <Link
             className="btn-main"
             to="/principito.pdf"
@@ -25,6 +22,9 @@ const DownloadCV = ({ showDownloadCV, setShowDownloadCV }) => {
           >
             Descargar
           </Link>
+          <button className="btn-main" onClick={() => setShowDownloadCV(false)}>
+            Cancelar
+          </button>
         </Stack>
       </Modal.Footer>
     </Modal>
