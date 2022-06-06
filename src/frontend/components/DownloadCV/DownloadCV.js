@@ -7,7 +7,7 @@ const DownloadCV = ({ showDownloadCV, setShowDownloadCV }) => {
     <Modal centered show={showDownloadCV} onHide={() => setShowDownloadCV(false)}>
       <Modal.Header>
         <Modal.Title>
-          ¿Está seguro que quieres descargar el Curriculum Vitae de
+          ¿Está segurx que quieres descargar el Curriculum Vitae de
           Repiquetérea?
         </Modal.Title>
       </Modal.Header>
