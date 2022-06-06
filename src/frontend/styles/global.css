@@ -1,11 +1,11 @@
 @font-face {
     font-family: "titulo";
-    src: url("../../assets/ProdottoInCina.ttf");
+    src: url("../assets/ProdottoInCina.ttf");
 }
 
 @font-face {
     font-family: "cuerpo";
-    src: url("../../assets/Garet-Book.ttf");
+    src: url("../assets/Garet-Book.ttf");
 }
 
 :root {
