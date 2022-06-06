@@ -68,11 +68,11 @@ const Header = () => {
             <Link to={TRABAJAMOS_JUNTOS_ROUTE}>¿Cómo nos contactamos?</Link>
           </li>
           <li>
-            <Link className="link-cv" to='/' onClick={() => {
+            <button className="link-cv" to='/' onClick={() => {
               setShowDownloadCV(true);
             }}>
               Descargar CV
-            </Link>
+            </button>
           </li>
           <li className="link-instagram">
             <a

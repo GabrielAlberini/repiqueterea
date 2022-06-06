@@ -17,12 +17,17 @@ header {
 header nav ul {
     list-style: none;
     margin-left: 0;
+    margin-bottom: 0;
     margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul li {
     position: relative;
     float: left;
+    height: 100%;
 }
 
 header nav ul li a{
@@ -77,7 +82,7 @@ header label {
 
 .link-instagram > a{
     padding: 0;
-    margin: .5rem;
+    margin-left: 1rem;
 }
 
 .menu-desplegable span {
@@ -90,8 +95,16 @@ header label {
 /*Link CV*/
 .link-cv {
     margin-left: .5rem;
+    width: 100%;
     background-color: var(--bg-link-cv);
     color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+.link-cv:hover {
+    background-color: var(--bg-link-cv-hover);
 }
 
 @media (max-width: 780px) {
@@ -116,6 +129,7 @@ header label {
 
     header nav ul {
        padding-left: 0;
+       flex-direction: column;
     }
 
     header nav ul li {
@@ -139,5 +153,16 @@ header label {
 
     #menu-bar:checked ~ nav {
         display: initial;
+    }
+
+    .link-cv {
+        margin-left: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .link-instagram > a{
+        padding: 0;
+        margin: .5rem 0 .5rem 0;
     }
 }
