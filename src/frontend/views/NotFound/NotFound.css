@@ -1,0 +1,11 @@
+.section-not-found {
+    min-height: 100vh;
+}
+
+.section-not-found div {
+    width: 100%;
+}
+
+.section-not-found div img {
+    width: 100%;
+}
