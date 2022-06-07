@@ -1,17 +1,16 @@
-.vstack {
+.cont-btn-cv {
     display: flex;
-    flex-direction: row !important;
-    justify-content: space-around !important;
+    justify-content: space-around;
 }
 
 @media (max-width: 780px) {
-    .vstack {
-        display: flex;
-        flex-direction: column !important;
-        flex: none !important;
+    .cont-btn-cv {
+        flex-direction: column;
+        margin: auto;
+    }
 
-    }
-    .modal-footer {
-        justify-content: center !important;
-    }
+    .cont-btn-cv a,
+    .cont-btn-cv button {
+        margin: .5rem;
+    }   
 }

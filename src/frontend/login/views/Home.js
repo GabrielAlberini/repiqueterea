@@ -27,6 +27,7 @@ import { AñadirModalTienda } from "../components/AñadirModalTienda/AñadirModa
 import { EditarModalTienda } from "../components/EditarModalTienda/EditarModalTienda";
 import { AñadirModalClase } from "../components/AñadirModalClase/AñadirModalClase";
 import { EditarModalClase } from '../components/EditarModalClase/EditarModalClase';
+import { SEOComponent } from "../../components/SEOComponente/SEOComponente";
 
 const Home = () => {
   const [ilustraciones, setIlustraciones] = useState([]);
@@ -100,6 +101,7 @@ const Home = () => {
 
   return (
     <Container>
+      <SEOComponent title="Panel de administración | Repiqueterea" />
       <AñadirModal
         isModalAñadir={isModalAñadir}
         setIsModalAñadir={setIsModalAñadir}
