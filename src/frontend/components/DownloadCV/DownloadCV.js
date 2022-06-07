@@ -18,7 +18,7 @@ const DownloadCV = ({ showDownloadCV, setShowDownloadCV }) => {
           <div className="cont-btn-cv">
           <Link
             className="btn-main"
-            to="/principito.pdf"
+            to="/CV-Camila-Ocampo.pdf"
             target="_blank"
             download 
             onClick={() => setShowDownloadCV(false)}

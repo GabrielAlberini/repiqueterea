@@ -2,23 +2,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    max-width: 800px;
+    width: 80%;
     margin: 3rem 0;
 }
 
 .section-bio .cont-img-bio {
-    width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-bio {
-    width: 100%;
+    width: 70%;
     border-radius: 5px;
+}
+
+.cont-txt-bio {
+    width: 100%;
 }
 
 @media (max-width: 780px) {
     .section-bio {
+        width: 100%;
         flex-direction: column;
         margin: 3rem 0 0 0;
+    }
+
+    .section-bio .cont-img-bio {
+        width: 100%;
+    }
+
+    .cont-img-bio {
+        width: 100%;
+    }
+
+    .img-bio {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+    }
+    
+    .cont-txt-bio {
+        width: 100%;
     }
 }

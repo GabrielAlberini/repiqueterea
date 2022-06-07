@@ -7,11 +7,11 @@ const SectionBioHome = () => {
         <div className="cont-img-bio">
           <img
             className="img-bio"
-            src="https://i.ibb.co/z7XtZjc/foto-de-perfil.jpg"
+            src="/mila.png"
             alt="imagen de biografía"
           />
         </div>
-        <div>
+        <div className="cont-txt-bio">
           <p>
             ¡Hola! Me llamo Camila Ocampo, crecí en San Justo, Santa Fe, una
             pequeña ciudad del norte de la provincia.
