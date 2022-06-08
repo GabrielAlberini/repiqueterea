@@ -23,6 +23,7 @@
 .item-clase-link {
     text-decoration: none;
     color: black;
+    background: linear-gradient(-45deg, #ee76522c, #e73c7e30, #23a5d529, #23d5ab2f);
 }
 
 .item-clase-link:hover {
@@ -56,6 +57,7 @@
 
 .description-item-clase {
     text-align: center;
+    margin-top: 1rem;
 }
 
 @media (max-width: 780px) {

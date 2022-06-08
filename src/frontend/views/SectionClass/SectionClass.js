@@ -63,7 +63,7 @@ const SectionClass = () => {
                         />
                       </div>
                       <p className="description-item-clase">{item.fecha}</p>
-                      <p className="description-item-clase">{item.tema}</p>
+                      <p className="tema-item-clase">{item.tema}</p>
                     </div>
                   </Link>
                 );
