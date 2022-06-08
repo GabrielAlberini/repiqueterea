@@ -3,6 +3,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.min.css";
 import { Link } from "react-router-dom";
+import { ITEMS_WORKS } from '../../services/dataItemsWork'
 
 const GaleriaDeImagenes = () => {
   const options = {
@@ -32,36 +33,16 @@ const GaleriaDeImagenes = () => {
 
   return (
     <OwlCarousel {...options}>
-      <div className="item">
-        <img src="https://i.ibb.co/xg3zpv5/ilustracion-amigas.png" alt="" />
-        <Link to="/ilustraciones" className="btn-main">
-          Ilustaciones
-        </Link>
-      </div>
-      <div className="item">
-        <img src="https://i.ibb.co/W6kg8DK/mascotas-titi.png" alt="" />
-        <Link to="/mascotas" className="btn-main">
-          Mascotas
-        </Link>
-      </div>
-      <div className="item">
-        <img src="https://i.ibb.co/ZJ17d1s/personajes-gilda.png" alt="" />
-        <Link to="/personajes" className="btn-main">
-          Personajes
-        </Link>
-      </div>
-      <div className="item">
-        <img src="https://i.ibb.co/pxXVQrW/mascota-pipina.png" alt="" />
-        <Link to="/expo-ferias" className="btn-main">
-          Expo / Ferias
-        </Link>
-      </div>
-      <div className="item">
-        <img src="https://i.ibb.co/bHLbn1r/mixtape.png" alt="" />
-        <Link to="/tienda" className="btn-main">
-          Tienda
-        </Link>
-      </div>
+      {ITEMS_WORKS.map((item) => {
+        return (
+          <div className="item">
+            <img src={item.img} alt={item.alt} />
+            <Link to={`/${item.url}`} className="btn-main title-item-que-hago">
+              {item.title}
+            </Link>
+          </div>
+        );
+      })}
     </OwlCarousel>
   );
 };
