@@ -29,8 +29,6 @@ const DetalleDeClase = () => {
     updateWorks();
   }, []);
 
-  console.log(sku, clase);
-
   return (
     <>
       <Layout>

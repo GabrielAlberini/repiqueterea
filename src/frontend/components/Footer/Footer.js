@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="cont-text-footer">
           Sitio desarrollado por <br />{" "}
           <a
-            href="https://gabrielalberini.vercel.app/"
+            href="https://gabrielalberini.con.ar/"
             target="_blank"
             rel="noreferrer"
           >
