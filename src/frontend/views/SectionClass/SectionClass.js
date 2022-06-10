@@ -34,14 +34,15 @@ const SectionClass = () => {
           <Title title="Clases" />
           <article className="cont-txt-tienda">
             <p>
-              Y como se trata de ir haciendo de a todo para llegar a ser un
-              artista independiente, en esta sección podrás algunas cositas que
-              ofrezco.
+              Enseñar arte es, para mí, comunicar desde la expresión y motivar a
+              explorar un mundo tan amplio y desafiante como es la cultura.
+              También me parece importante develar el detrás de la docencia, la
+              planificación e investigación de los sujetos educativos.
             </p>
             <p>
-              Son ideales como regalo, decorar un hambiente, hacer cuadritos,
-              guardar cositas. Mandame un mensaje y coordinamos para que tengas
-              tu Repiquelemento jaja.
+              Es por eso que en esta sección comparto el material que me
+              inspira, retomo y creo para mis clases, para todas las edades y
+              ahora también para todo público.
             </p>
           </article>
           <article className="cont-item-clase">
