@@ -50,10 +50,10 @@ const SeccionDeTrabajosFeria = () => {
                   <div className="cont-item-feria" key={item.sku}>
                     <h4>{item.nombre}</h4>
                     <p>{item.lugar}</p>
+                    <p>{item.direccion}</p>
                     <p>
                       {item.fecha} - {item.hora}
                     </p>
-                    <p>{item.direccion}</p>
                     <div className="cont-img-item-feria">
                       <img
                         className="img-item-feria"
