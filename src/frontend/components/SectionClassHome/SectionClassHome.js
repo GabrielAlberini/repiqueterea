@@ -26,7 +26,7 @@ const SectionClassHome = () => {
       <div className="cont-img-class">
         <img
           className="img-class"
-          src="https://i.ibb.co/cYc4WvK/class.jpg"
+          src="https://i.ibb.co/23gBsJY/classs.jpg"
           alt="Foto de Mila profe"
         />
       </div>

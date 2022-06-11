@@ -29,10 +29,14 @@ import { SeccionDeTrabajosTienda } from "./frontend/views/SeccionDeTrabajosTiend
 /*Detalle de clase*/
 import { DetalleDeClase } from "./frontend/components/DetalleDeClase/DetalleDeClase";
 
+/*Scroll to top*/
+import ScrollToTop from './frontend/services/ScrollToTop'
+ 
 const Router = () => {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path={QUIEN_SOY_ROUTE} element={<QuienSoy />}></Route>
           <Route path={QUE_HAGO} element={<QueHago />}></Route>
