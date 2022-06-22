@@ -36,6 +36,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .item-clase:hover .cont-img-item-clase {
@@ -53,6 +54,7 @@
 
 .title-item-clase {
     padding: 1rem;
+    text-align: center;
 }
 
 .description-item-clase {

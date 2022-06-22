@@ -19,11 +19,11 @@
 }
 
 .section-detalle-clase div {
-    width: auto;
+    max-width: 500px;
 }
 
 .section-detalle-clase div img {
-    width: auto;
+    width: 100%;
 }
 
 .detalle-clase-descr {

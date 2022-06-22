@@ -50,19 +50,19 @@ const TrabajamosJuntos = () => {
           <div className="cont-main-img-trabajamos-juntos">
             <div>
               <img
-                src="https://i.ibb.co/VLCw2Hp/3.jpg"
+                src="./trabajamos-juntos/3.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
             <div>
               <img
-                src="https://i.ibb.co/J2YzRhy/2.jpg"
+                src="./trabajamos-juntos/2.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
             <div>
               <img
-                src="https://i.ibb.co/9WBq1wf/1.jpg"
+                src="./trabajamos-juntos/1.jpg"
                 alt="imagenes de cuadro"
               />
             </div>

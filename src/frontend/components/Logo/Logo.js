@@ -8,7 +8,7 @@ const Logo = () => {
       <div className="container-logo">
         <img
           className="logo"
-          src="https://i.ibb.co/wRYCPsb/logo2022.png"
+          src="./logo.png"
           alt="logo repiqueterea"
         />
       </div>

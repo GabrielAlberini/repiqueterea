@@ -9,7 +9,7 @@ import {
 
 const ITEMS_WORKS = [
   {
-    img: "https://i.ibb.co/FJNyFsm/ilustraciones.png",
+    img: "./img-home/ilustraciones.png",
     alt: "Imagen de ilustración",
     title: "Ilustraciones",
     url: "ilustraciones",
@@ -17,7 +17,7 @@ const ITEMS_WORKS = [
     route: ILUSTRACIONES
   },
   {
-    img: "https://i.ibb.co/yyZKk87/mascotas.png",
+    img: "./img-home/mascotas.png",
     alt: "Imagen de ilustración",
     title: "Mascotas",
     url: "mascotas",
@@ -25,7 +25,7 @@ const ITEMS_WORKS = [
     route: MASCOTAS
   },
   {
-    img: "https://i.ibb.co/WKJbHvX/personajes.png",
+    img: "./img-home/personajes.png",
     alt: "Imagen de ilustración",
     title: "Personajes",
     url: "personajes",
@@ -33,7 +33,7 @@ const ITEMS_WORKS = [
     route: PERSONAJES
   },
   {
-    img: "https://i.ibb.co/kBQCrK3/blog.png",
+    img: "./img-home/blog.png",
     alt: "Imagen de ilustración",
     title: "Blog personal",
     url: "blog-personal",
@@ -41,7 +41,7 @@ const ITEMS_WORKS = [
     route: BLOG_PERSONAL
   },
   {
-    img: "https://i.ibb.co/MsJZWdG/expo.png",
+    img: "./img-home/expo.png",
     alt: "Imagen de ilustración",
     title: "Exposiciones y ferias",
     url: "expo-ferias",
@@ -49,7 +49,7 @@ const ITEMS_WORKS = [
     route: EXPO_FERIAS
   },
   {
-    img: "https://i.ibb.co/9ZvDcr4/tienda.png",
+    img: "./img-home/tienda.png",
     alt: "Imagen de ilustración",
     title: "Tienda",
     url: "tienda",

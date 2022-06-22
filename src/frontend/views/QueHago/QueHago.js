@@ -48,19 +48,19 @@ const QueHago = () => {
           <div className="cont-main-img-trabajamos-juntos">
             <div>
               <img
-                src="https://i.ibb.co/Vm4XQ29/1.jpg"
+                src="./que-hago/1.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
             <div>
               <img
-                src="https://i.ibb.co/kDwV4Vr/2.jpg"
+                src="./que-hago/2.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
             <div>
               <img
-                src="https://i.ibb.co/df2VrjR/3.jpg"
+                src="./que-hago/3.jpg"
                 alt="imagenes de cuadro"
               />
             </div>
