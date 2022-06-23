@@ -24,7 +24,7 @@ const SectionClass = () => {
 
   useEffect(() => {
     updateClase();
-  }, [itemsClass]);
+  }, []);
 
   return (
     <>

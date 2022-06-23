@@ -41,7 +41,7 @@ const SeccionDeTrabajos = ({ title, categoria }) => {
 
   useEffect(() => {
     updateWorks();
-  }, [itemList]);
+  }, []);
 
   return (
     <>

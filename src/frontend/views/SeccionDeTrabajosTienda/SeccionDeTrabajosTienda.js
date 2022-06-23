@@ -23,7 +23,7 @@ const SeccionDeTrabajosTienda = () => {
 
   useEffect(() => {
     updateWorks();
-  }, [itemsBlog]);
+  }, []);
 
   return (
     <>

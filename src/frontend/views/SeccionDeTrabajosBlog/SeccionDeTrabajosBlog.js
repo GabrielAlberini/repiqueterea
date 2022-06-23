@@ -23,7 +23,7 @@ const SeccionDeTrabajosBlog = () => {
 
   useEffect(() => {
     updateWorks();
-  }, [itemsBlog]);
+  }, []);
 
   return (
     <>
