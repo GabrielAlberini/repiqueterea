@@ -43,13 +43,17 @@ const DetalleDeClase = () => {
           </section>
         ) : (
           <>
-            <SEOComponent title={title} description={description}/>
+            <SEOComponent title={title} description={description} />
             <section className="section-detalle-clase">
               <h3>{clase.nombre}</h3>
               <p>{clase.fecha}</p>
               <p>{clase.tema}</p>
               <div className="cont-img-detail-clase">
-                <img className="img-detail-clase" src={clase.URLimagen} alt="" />
+                <img
+                  className="img-detail-clase"
+                  src={clase.URLimagen}
+                  alt=""
+                />
               </div>
               <p className="detalle-clase-descr">{clase.descripcion}</p>
               <button

@@ -1,114 +1,132 @@
 @font-face {
-    font-family: "titulo";
-    src: url("../assets/ProdottoInCina.ttf");
+  font-family: "titulo";
+  src: url("../assets/ProdottoInCina.ttf");
+  font-display: fallback;
 }
 
 @font-face {
-    font-family: "cuerpo";
-    src: url("../assets/Garet-Book.ttf");
+  font-family: "cuerpo";
+  src: url("../assets/Garet-Book.ttf");
+  font-display: fallback;
 }
 
 :root {
-    /*Header*/
-    --bg-degrade-radial: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-    --bg-links-header: rgba(34, 192, 195, 0.739);
-    --bg-link-cv: rgba(128, 0, 128, 0.309);
-    --bg-link-cv-hover: rgba(128, 0, 128, 0.439);
+  /*Header*/
+  --bg-degrade-radial: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  --bg-links-header: rgba(34, 192, 195, 0.739);
+  --bg-link-cv: rgba(128, 0, 128, 0.309);
+  --bg-link-cv-hover: rgba(128, 0, 128, 0.439);
 
-    /*Button*/
-    --bg-degrade: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
-    --bg-degrade-hover: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.698) 31%, rgba(142, 45, 253, 0.674) 79%);
+  /*Button*/
+  --bg-degrade: -webkit-linear-gradient(
+    0deg,
+    rgba(34, 192, 195, 0.43) 31%,
+    rgba(142, 45, 253, 0.33) 79%
+  );
+  --bg-degrade-hover: -webkit-linear-gradient(
+    0deg,
+    rgba(34, 192, 195, 0.698) 31%,
+    rgba(142, 45, 253, 0.674) 79%
+  );
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'cuerpo';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "cuerpo";
 }
 
 p {
-    line-height: 2;
+  line-height: 2;
 }
 
 /*Botón primario*/
 .btn-main {
-    width: 200px;
-    text-align: center;
-    background-color: rebeccapurple;
-    margin: 2rem 0;
-    padding: .5rem 1rem;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    background: var(--bg-degrade);
-    transition: 1s ease;
-    display: inline-block;
-    border: none;
+  width: 200px;
+  text-align: center;
+  background-color: rebeccapurple;
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  background: var(--bg-degrade);
+  transition: 1s ease;
+  display: inline-block;
+  border: none;
 }
 
 .btn-main:hover {
-    color: black;
-    background: var(--bg-degrade-hover);
-    transition: 1s ease;
-    cursor: pointer;
+  color: black;
+  background: var(--bg-degrade-hover);
+  transition: 1s ease;
+  cursor: pointer;
 }
 
 h2 {
-padding: 2rem 0;
+  padding: 2rem 0;
 }
 
-/*Loader*/ 
+/*Loader*/
 
 .container-img-loader {
-    width: 100px;
-    animation-name: rotation;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-    margin: 0 auto 4rem auto;
+  width: 100px;
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 0 auto 4rem auto;
 }
 
 .img-loader {
-    width: 100%;
+  width: 100%;
 }
 
 /*Texto coloreado*/
 
 .texto-coloreado {
-    padding: 0 .3rem;
-    background: -webkit-linear-gradient(0deg, rgba(34, 192, 195, 0.43) 31%, rgba(142, 45, 253, 0.33) 79%);
+  padding: 0 0.3rem;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(34, 192, 195, 0.43) 31%,
+    rgba(142, 45, 253, 0.33) 79%
+  );
 }
 
 /*Botón subir arriba*/
 
 .btn-to-up {
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    border: none;
-    background: rgba(64, 224, 208, 0.548);
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  background: rgba(64, 224, 208, 0.548);
 }
 
 @keyframes rotation {
-    0% {
-      transform:rotate(0deg);
-    }
-    100% {
-      transform:rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 780px) {
-    .btn-to-up {
-        bottom: 20px;
-        right: 20px;
-    }
+  .btn-to-up {
+    bottom: 20px;
+    right: 20px;
+  }
 }
